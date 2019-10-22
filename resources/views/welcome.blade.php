@@ -5,8 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Brand Samosa Academy</title>
-    <link rel="icon" href="theme/img/logo (3).png">
+    <title>Nexel world Academy</title>
+    <link rel="icon" href="theme/img/favicon.jpg">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="theme/css/bootstrap.min.css">
     <!-- animate CSS -->
@@ -32,7 +32,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="{{url('/')}}"> <img src="theme/img/logo (3).png" alt="Brand samosa" width="100" height="100"> </a>
+                        <a class="navbar-brand" href="{{url('/')}}"> <img src="theme/img/logo.png" alt="Brand samosa" > </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -225,21 +225,23 @@
             <div class="row justify-content-between">
                 <div class="col-sm-6 col-md-4 col-xl-3">
                         <div class="single-footer-widget footer_1">
-                                <a href="https://brandsamosa.com"> <img src="theme/img/logo (3).png" alt="" height="100" width="100"> </a>
+                                <a href="https://brandsamosa.com"> <img src="theme/img/logo.png" alt=""> </a>
                              
                             </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-xl-4">
                     <div class="single-footer-widget footer_2">
                         <h4>Follow us</h4>
-                        <p>Stay updated with our latest trends Seed heaven so said place winged over given forth fruit.
+                        <p>Stay updated with our latest trends.
                         </p>
                         
                         <div class="social_icon">
-                            <a href="https://www.facebook.com/brandsamosa/?modal=admin_todo_tour"> <i class="ti-facebook"></i> </a>
-                            <a href="https://twitter.com/BrandSamosa"> <i class="ti-twitter-alt"></i> </a>
-                            <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fbrandsamosa%2Fabout"> <i class="ti-linkedin"></i> </a>
-                           
+                            <a href="https://www.facebook.com/groups/nexelworld/" target="_blank"> <i class="ti-facebook"></i> </a>
+                            <a href="https://nexelworld.com/" target="_blank"> <i class="ti-twitter-alt"></i> </a>
+                            <a href="https://www.linkedin.com/groups/10359513/" target="_blank"> <i class="ti-linkedin"></i> </a>
+                            <a href="https://www.instagram.com/nexelworld/" target="_blank"> <i class="ti-instagram"></i> </a>
+                            <a href="https://www.youtube.com/channel/UC2mmOqGZHw7f5m8clDtO4xg/featured?disable_polymer=1" target="_blank"> <i class="ti-youtube"></i> </a>
+
                         </div>
                     </div>
                 </div>
@@ -247,9 +249,9 @@
                     <div class="single-footer-widget footer_2">
                         <h4>Contact us</h4>
                         <div class="contact_info">
-                            <p><span> Address :</span>  New Delhi, India | Chicago, USA  </p>
-                            <p><span> Phone :</span> +91 9971 5656 00</p>
-                            <p><span> Email : </span>hello@brandsamosa.com </p>
+                            <p><span> Address :</span> India | Africa | UAE  </p>
+                         
+                            <p><span> Email : </span>info@nexelworld.com </p>
                         </div>
                     </div>
                 </div>
