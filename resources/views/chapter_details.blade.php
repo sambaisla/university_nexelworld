@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Nexel World Academy</title>
-    <link rel="icon" href="theme/img/logo.png">
+    <link rel="icon" href="theme/img/favicon.jpg">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="theme/css/bootstrap.min.css">
     <!-- animate CSS -->
