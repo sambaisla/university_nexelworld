@@ -53,7 +53,7 @@
                                     <a class="nav-link" href="#popular_courses">Courses</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Launchpad</a>
+                                <a class="nav-link" href="{{url('/launchpad')}}">Launchpad</a>
                                 </li>
                                 <li class="nav-item">
                                         <a class="nav-link" href="#footer">Contact</a>
