@@ -250,7 +250,7 @@ class HomeController extends Controller
 
         // echo "<pre>";print_r($reference_details);die;
      
-        $reference_url="http://academy.brandsamosa.com/user_reference/".Auth::User()->id.'/'.$reference_details->reference_number;
+        $reference_url="https://acad.nexelworld.com/user_reference/".Auth::User()->id.'/'.$reference_details->reference_number;
 
        
         $course=\App\course::select('course_id')

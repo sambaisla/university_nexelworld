@@ -34,9 +34,9 @@ class PaymentController extends Controller
             'phone' => $request->phone,
             'buyer_name' => $request->username,
             'course_id' => $request->course_id,
-            'redirect_url' => 'http://academy.brandsamosa.com/test',
+            'redirect_url' => 'https://acad.nexelworld.com/test',
             'send_email' => false,
-            'webhook' => 'http://brandsamosa.com/webhook/',
+            'webhook' => 'https://acad.nexelworld.com/webhook/',
             'send_sms' => false,
             'email' => $request->email,
             'allow_repeated_payments' => false
@@ -143,9 +143,9 @@ class PaymentController extends Controller
             'amount' => '948',
             'phone' => Auth::user()->mobile_number,
             'buyer_name' => Auth::user()->name,
-            'redirect_url' => 'http://academy.brandsamosa.com/subscription',
+            'redirect_url' => 'https://acad.nexelworld.com/subscription',
             'send_email' => false,
-            'webhook' => 'http://brandsamosa.com/webhook/',
+            'webhook' => 'https://acad.nexelworld.com/webhook/',
             'send_sms' => false,
             'email' => Auth::user()->email,
             'allow_repeated_payments' => false

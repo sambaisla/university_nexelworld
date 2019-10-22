@@ -149,7 +149,7 @@
                                                 <a href="{{ route('password_reset') }}" class="nav-link" style="text-decoration:none;">
                                                        <i class="nav-link-icon lnr-inbox"></i>
                                                        <span>
-                                                            Wallet balance - {{Auth::User()->credits}}
+                                                            Wallet balance - Rs {{Auth::User()->credits}}
                                                        </span>
                                                    </a>
                                            </li>
@@ -193,7 +193,7 @@
                             <div class="col-md-12">
                                 <div class="main-card mb-3 card bg-midnight-bloom">
                                     <div class="card-body">
-                                        <h4 class="text-right" style="color:yellow;font-weight:bold;">Wallet balance - {{Auth::User()->credits}}</h4><hr>
+                                        <h4 class="text-right" style="color:yellow;font-weight:bold;">Wallet balance - Rs {{Auth::User()->credits}}</h4><hr>
                                         <h4 style="color:white;font-weight:bold;">Learning is fun with friends</h4><hr>
             
                                         <p style="color:white;font-size:16px;">Watch chapters and <a style="color:yellow;font-size:20px;" href="{{url('my_courses')}}"><u>earn 10 credits</u></a> </p>
@@ -258,7 +258,7 @@
                 <div class="widget-subheading"><a href="{{url('home')}}">Explore our others courses.</a></div>
             </div>
             <div class="widget-content-right">
-                <div class="widget-numbers text-warning">Wallet-<span>{{Auth::User()->credits}}</span></div>
+                <div class="widget-numbers text-warning">Wallet - <span>Rs {{Auth::User()->credits}}</span></div>
             </div>
         </div>
     </div>

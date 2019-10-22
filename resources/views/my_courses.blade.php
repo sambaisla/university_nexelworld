@@ -149,7 +149,7 @@
                                                 <a href="{{ route('password_reset') }}" class="nav-link" style="text-decoration:none;">
                                                        <i class="nav-link-icon lnr-inbox"></i>
                                                        <span>
-                                                            Wallet balance - {{Auth::User()->credits}}
+                                                            Wallet balance - Rs {{Auth::User()->credits}}
                                                        </span>
                                                    </a>
                                            </li>
