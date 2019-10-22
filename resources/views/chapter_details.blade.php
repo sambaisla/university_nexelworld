@@ -279,23 +279,28 @@
     <footer class="footer-area">
         <div class="container">
             <div class="row justify-content-between">
-                <div class="col-sm-6 col-md-4 col-xl-3">
+                <div class="col-sm-6 col-md-4 col-xl-4">
                     <div class="single-footer-widget footer_1">
-                        <a href="https://brandsamosa.com"> <img src="theme/img/logo (3).png" alt="" height="100" width="100"> </a>
-                       
+                        <a href="https://brandsamosa.com"> <img src="theme/img/logo (3).png" alt="" height="80" width="80"> </a>
+                        <p>We build brands that “SELL”.
+We help Small Businesses, Startups and Professionals win in the digital world by providing Affordable, Customised and Innovative Social Branding & Sales solutions. Build your Brand, Improve Sales and Leverage Social Media for Business Growth.</p>
+                        
+                        <a href="https://brandsamosa.com" style="text-decoration:none;color:#888888;">Get it touch with us for a FREE business consultation about your business or brand.</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-xl-4">
                     <div class="single-footer-widget footer_2">
                         <h4>Follow us</h4>
-                        <p>Stay updated with our latest trends Seed heaven so said place winged over given forth fruit.
-                        </p>
-                        
-                        <div class="social_icon">
-                            <a href="https://www.facebook.com/brandsamosa/?modal=admin_todo_tour"> <i class="ti-facebook"></i> </a>
-                            <a href="https://twitter.com/BrandSamosa"> <i class="ti-twitter-alt"></i> </a>
-                            <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fbrandsamosa%2Fabout"> <i class="ti-linkedin"></i> </a>
-                        </div>
+                        <p>Stay tuned with our latest updates about industry trends, actionable tips, detailed case studies, client testimonials, events and webinars and much more.
+
+</p>
+
+<div class="social_icon">
+    <a href="https://www.facebook.com/brandsamosa/?modal=admin_todo_tour"> <i class="ti-facebook" style="color:#3B5998;font-size:25px;"></i> </a>
+    <a href="https://twitter.com/BrandSamosa"> <i class="ti-twitter-alt" style="color:#1DA1F2;font-size:25px;"></i> </a>
+    <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fbrandsamosa%2Fabout"> <i class="ti-linkedin" style="color:#007DA9;font-size:25px;"></i> </a>
+   
+</div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-6 col-md-4">

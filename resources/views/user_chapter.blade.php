@@ -157,7 +157,7 @@
                                                 <a href="{{ route('password_reset') }}" class="nav-link" style="text-decoration:none;">
                                                        <i class="nav-link-icon lnr-inbox"></i>
                                                        <span>
-                                                      My Wallet-{{Auth::User()->credits}}
+                                                      Wallet balance - {{Auth::User()->credits}}
                                                        </span>
                                                    </a>
                                            </li>
@@ -194,9 +194,60 @@
 
 
 
+<div class="row">
+        <div class="col-md-12">
+            <div class="main-card mb-3 card bg-midnight-bloom">
+                <div class="card-body">
+                    <h4 class="text-right" style="color:yellow;font-weight:bold;">Wallet balance - {{Auth::User()->credits}}</h4><hr>
+                    <h4 style="color:white;font-weight:bold;">Learning is fun with friends</h4><hr>
+
+                    <p style="color:white;font-size:16px;">Watch chapters and <a style="color:yellow;font-size:20px;" href="{{url('my_courses')}}"><u>earn 10 credits</u></a> </p>
+                    <p style="color:white;font-size:16px;"><a style="color:yellow;font-size:20px;" href="{{url('/refer_friend')}}" ><u>Refer</u> </a>your friend to earn 100 credits. </p>
+
+
+                </div>
+                </div>
+          
+          
+        </div>
+      
+        
+    </div>
+
+
+
+    <hr>
+    <div class="row justify-content-center" >
+        <div class="col-md-6 col-lg-3">
+
+            <a href="{{url('my_courses')}}">
+            <div class="card-shadow-danger mb-3 widget-chart widget-chart2 text-left card">
+                <div class="widget-content">
+                    <div class="widget-content-outer">
+                       
+                        <div class="widget-content-left fsize-1">
+                            <div class="opacity-8 text-center"><b><span style="color:blue;">My courses</span></b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </a>
+
+
+        </div>
+
+    </div>
+
+
+    <hr>
+
+
+
+
+
    
           
-                            <div class="row">
+                            <div class="row"  id="scroll_to">
                                     <div class="col-md-12">
                                         <div class="main-card mb-3 card">
                                             <div class="card-body">
@@ -266,6 +317,8 @@
                                     <div class="widget-content-left">
                                     <h4 style="color:whitesmoke;">{{$othercourse->course_name}} </h4>                                
                                         <div class="widget-heading" style="color:white;">Duration: {{$othercourse->course_duration}}</div>
+                                        <div class="widget-heading" style="color:white;"><span style="font-size:15px;">Course price</span> : <strike style="color:yellow;">Rs 2999</strike></div>
+                                        <div class="widget-heading" style="color:white;"><span style="font-size:15px;">Member price</span> : Free</div>
                                         <br>                                       
                                         <button type="submit" onclick="window.location='{{ url("user_watched_courses-$othercourse->course_id") }}'" class="mb-2 mr-2 btn btn-warning" value="Buy Course">Watch</button>
                                     </div>
@@ -277,27 +330,24 @@
 
 @endif
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                          
+                      
        
         </div>
     </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    
+    $(function() { 
+     $('html, body').animate({
+        scrollTop: $('#scroll_to').offset().top}, 1000);
+    }); 
+    
+    </script>
+
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <script type="text/javascript" src="bsa_dashboard/architectui-html-free/assets/scripts/main.js"></script>
 </body>

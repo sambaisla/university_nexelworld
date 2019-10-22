@@ -106,7 +106,7 @@
                             <div class="page-title-wrapper">
                                 <div class="page-title-heading">
                                    
-                                  <div>  <b>Enjoy your course</b>
+                                  <div>  <b> Welcome to your dashboard </b>
                                        
                                     </div>
                                 </div>
@@ -185,10 +185,7 @@
                        @endif           
 
      
-
-
-
-
+   
                        <div class="row">
                             <div class="col-md-12">
                                 <div class="main-card mb-3 card bg-midnight-bloom">
@@ -230,117 +227,59 @@
             
             
                             </div>
-                
+                      
                         </div>
             
             
                         <hr>
 
 
-                       <?php
-                       $chapters_completed=\App\chapters_completed_user_details::where('course_id',$course_id)
-                                                       ->where('user_id',Auth::User()->id) 
-                                                       ->count();
-                       $total_chapter=\App\course::where('course_id',$course_id)->count();                                
-                       $actual_completed_chapters=$chapters_completed-1;
-                    //    echo "<pre>";print_r($total_chapter);die;
-                       
-                       ?>
-
-@if($actual_completed_chapters==$total_chapter)
-
-<div class="row">
-<div class="col-lg-12 col-xl-8">
-    <div class="card mb-3 widget-content justify-content-center">
-        <div class="widget-content-wrapper">
-            <div class="widget-content-left">
-                <div class="widget-heading">Congratulations !! You have completed this course.</div>
-                <div class="widget-subheading"><a href="{{url('home')}}">Explore our others courses.</a></div>
-            </div>
-            <div class="widget-content-right">
-                <div class="widget-numbers text-warning">Wallet-<span>{{Auth::User()->credits}}</span></div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-@endif
 
 
-        
+@if(count($course)>0)
+            <div class="row" id="scroll_to">
 
-                       <div class="row"  id="scroll_to">
-                       <div class="col-md-12">
-                        <div class="main-card mb-3 card">
-                            <div class="card-body">
-                                <h5 class="card-title">List of lessons</h5>
-                                <span style="color:red;">Note - To unlock lessons, complate the exercises at the end of each lesson</span>
-                                <hr>
-                                <ul class="list-group">
-                                   <?php $i=0; ?>
-                                    @foreach($course_details as $chapters)
-                                    <?php
-                                    $chapters_completed_user_details=\App\chapters_completed_user_details::where('course_id',$course_id)
-                                                                    ->where('user_id',Auth::User()->id) 
-                                                                    ->where('chapter_id',$chapters->chapter_id)                
-                                                                    ->first();
-                                    
-                                    $i++;
-                                    ?>
-                                    <li class="list-group-item">
-                                   
-                                        <h5 class="list-group-item-heading">
-                                            <a style="color:black;" href="{{url('user_watching_chapter-'.$course_id.'-'.$chapters->chapter_id)}}">Lesson {{$i}} - {{$chapters->chapter_name}}</a></h5>
-                                        <p class="list-group-item-text">{{$chapters->chapter_details}}</p>
-                                    </li>
-                                  
-                                   @endforeach
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                       </div>
-     
-
-
-
-
-@if(count($other_courses)>0)
-<hr>
-<h4>Explore other courses</h4>
-<br>
-
-        <div class="row" >
-
-                @foreach($other_courses as $val)
+                @foreach($course as $val)
 
                 <?php
-                    $othercourse=\App\course::where('course_id',$val->course_id)
-                                ->first();
+                    $course_details=\App\course::where('course_id',$val->course_id)
+                                   ->first();
                 ?>
                     <div class="col-lg-6 col-xl-4">
                             <div class="card mb-3 widget-content bg-midnight-bloom">
                                 <div class="widget-content-wrapper">
                                 
                                     <div class="widget-content-left">
-                                    <h4 style="color:whitesmoke;">{{$othercourse->course_name}} </h4>                                
-                                        <div class="widget-heading" style="color:white;">Duration: {{$othercourse->course_duration}}</div>
+                                       <h4 style="color:whitesmoke;">{{$course_details->course_name}} </h4>                                
+                                        <div class="widget-heading" style="color:white;">Duration: {{$course_details->course_duration}}</div>
                                         <div class="widget-heading" style="color:white;"><span style="font-size:15px;">Course price</span> : <strike style="color:yellow;">Rs 2999</strike></div>
                                         <div class="widget-heading" style="color:white;"><span style="font-size:15px;">Member price</span> : Free</div>
+                                        
                                         <br>                                       
-                                        <button type="submit" onclick="window.location='{{ url("user_watched_courses-$othercourse->course_id") }}'" class="mb-2 mr-2 btn btn-warning" value="Buy Course">Watch</button>
+                                        <button type="submit" onclick="window.location='{{ url("user_watched_courses-$course_details->course_id") }}'" class="mb-2 mr-2 btn btn-warning" value="Buy Course">Watch</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                 @endforeach
             </div>
+@else 
+
+<div class="row justify-content-center">
+<div class="col-lg-10 col-xl-10">
+        <div class="card mb-3 widget-content">
+            <div class="widget-content-wrapper">
+                <div class="widget-content-center">
+                    <p><b>No course found </b></p>
+                 
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</div>
 
 @endif
-
-
-
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -352,7 +291,6 @@ $(function() {
 }); 
 
 </script>
-
 
 
 

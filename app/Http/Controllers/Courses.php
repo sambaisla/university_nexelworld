@@ -156,8 +156,6 @@ class Courses extends Controller
        $course_watched_count = \App\chapters_completed_user_details::where('user_id',$user_id)
        ->where('course_id',$course_id)
        ->count();
-      
-    //    echo "<pre>";print_r($course_watched_count);die;
 
                 if($course_watched_count==0)
                 {
@@ -169,15 +167,25 @@ class Courses extends Controller
                         ]
                     );
                 }
-          
-
-              
                 return redirect()->route('course_chapters', $course_id);
-            
-
-
-                 
+                           
     }
+
+
+
+
+    public function my_courses()
+    {
+        $user_id=Auth::User()->id;
+        $course=\App\chapters_completed_user_details::
+        select('course_id')
+        ->distinct()
+        ->where('user_id',$user_id)
+        ->get();
+        return view('my_courses',compact('course'));
+ 
+    }
+
 
 
 }

@@ -94,50 +94,7 @@
                                 </li>
                         
 
-                                    {{-- for purchased courses --}}
-
-                                   
-
-                                    <li class="app-sidebar__heading">My Courses</li>
-
-                                    <li>
-
-                                        @foreach($course as $val)
-                                        <?php
-                                        $course_details=\App\course::where('course_id',$val->course_id)
-                                        ->first();
-
-                                        $chapter_details=\App\course::where('course_id',$val->course_id)
-                                                        ->get();
-                                    
-                                        
-                                        ?>
-                                        <a href="#">
-                                            <i class="metismenu-icon pe-7s-diamond"></i>
-                                            {{$course_details->course_name}}
-                                        
-                                            <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                        </a>
-
-                                            <ul>
-                                                @foreach($chapter_details as $chapter)
-                                                        <li>
-                                                            <a href="{{url('user_chapter'.'-'.$val->course_id.'-'.$chapter->chapter_id)}}">
-                                                                <i class="metismenu-icon"></i>
-                                                                {{ Str::words($chapter->chapter_name, 5)}}
-                                                               
-                                                            </a>
-                                                        </li>
-                                                @endforeach 
-                                            </ul>
-
-
-
-                                    @endforeach            
-                                    </li>
-                                 
-                       
-            {{-- end of purchased courses --}}
+                   
                    
                             </ul>
                         </div>
@@ -192,7 +149,7 @@
                                                 <a href="{{ route('password_reset') }}" class="nav-link" style="text-decoration:none;">
                                                        <i class="nav-link-icon lnr-inbox"></i>
                                                        <span>
-                                                      My Wallet-{{Auth::User()->credits}}
+                                                      Wallet balance - {{Auth::User()->credits}}
                                                        </span>
                                                    </a>
                                            </li>
@@ -219,16 +176,63 @@
 
 
 
+                        <div class="row">
+                                <div class="col-md-12">
+                                    <div class="main-card mb-3 card bg-midnight-bloom">
+                                        <div class="card-body">
+                                            <h4 class="text-right" style="color:yellow;font-weight:bold;">Wallet balance - {{Auth::User()->credits}}</h4><hr>
+                                            <h4 style="color:white;font-weight:bold;">Learning is fun with friends</h4><hr>
+                        
+                                            <p style="color:white;font-size:16px;">Watch chapters and <a style="color:yellow;font-size:20px;" href="{{url('my_courses')}}"><u>earn 10 credits</u></a> </p>
+                                            <p style="color:white;font-size:16px;"><a style="color:yellow;font-size:20px;" href="{{url('/refer_friend')}}" ><u>Refer</u> </a>your friend to earn 100 credits. </p>
+                        
+                        
+                                        </div>
+                                        </div>
+                                  
+                                  
+                                </div>
+                              
+                                
+                            </div>
+                        
+                        
+                        
+                            <hr>
+                            <div class="row justify-content-center" >
+                                <div class="col-md-6 col-lg-3">
+                        
+                                    <a href="{{url('my_courses')}}">
+                                    <div class="card-shadow-danger mb-3 widget-chart widget-chart2 text-left card">
+                                        <div class="widget-content">
+                                            <div class="widget-content-outer">
+                                               
+                                                <div class="widget-content-left fsize-1">
+                                                    <div class="opacity-8 text-center"><b><span style="color:blue;">My courses</span></b></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </a>
+                        
+                        
+                                </div>
+                       
+                            </div>
+                        
+                        
+                            <hr>
 
 
-                        <div class="tab-content">
+                        <div class="tab-content" id="scroll_to">
                             <div class="tab-pane tabs-animation fade show active" id="tab-content-1" role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-10">
-                                                 
+                                                 <h6>Copy this link and share with your friends to earn 100 credits each time</h6>
+                                                 <br>
                                             <input id=password value="{{$reference_url}}" class="form-control">
                                             <br>
-                                            <button class="btn btn-danger" id=copy_btn>Copy</button>
+                                            <button onclick="copied()" class="btn btn-danger" id=copy_btn>Copy</button>
                                    
                                     </div>
                                 </div>                               
@@ -238,15 +242,35 @@
 
 
 
-    <script>
-         function clickListener() {
-                document.getElementById('password').select();
-                document.execCommand('copy');
-                                }
-                document.getElementById('copy_btn').addEventListener('click', clickListener);
-    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
 
+$(function() { 
+    $('html, body').animate({
+    scrollTop: $('#scroll_to').offset().top}, 1000);
+}); 
+
+</script>
+
+<script>
+
+        function clickListener() {
+                 document.getElementById('password').select();
+            document.execCommand('copy');
+        }
+        
+        document.getElementById('copy_btn').addEventListener('click', clickListener);
           
+          </script>
+          
+          <script>
+                function copied() {
+                  alert("Link copied !!");
+                }
+        </script>
+
+
+
 
                 <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
         </div>

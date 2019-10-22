@@ -30,7 +30,9 @@ class HomeController extends Controller
 
         // echo "ddd";die;
 
-        $course=\App\course::select('course_id')->distinct()->get();
+        $course=\App\course::select('course_id')
+        ->distinct()
+        ->get();
         // echo "<pre>";print_r($course_details[0]->course_name);die;
         $user_payment_details=\App\user_payment_details::select('course_id')
                     ->where('user_id',Auth::User()->id)

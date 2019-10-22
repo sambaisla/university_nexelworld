@@ -189,3 +189,5 @@ Route::get('/user_watching_chapter-{course_id}-{chapter_id}',function($course_id
 
 
 })->name('user_watching_chapter');
+
+Route::get('/my_courses', 'Courses@my_courses')->name('my_courses');

@@ -196,13 +196,13 @@
                         <ul>
                             <li>
                                 <a class="justify-content-between d-flex" href="#">
-                                    <p>Course</p>
+                                    <p style="color:black;font-weight:bold;font-size:18px;">Course</p>
                                     <span class="color">{{$chapter_details[0]['course_name']}}</span>
                                 </a>
                             </li>
                             <li>
                                 <a class="justify-content-between d-flex" href="#">
-                                    <p>Trainer’s Name</p>
+                                    <p style="color:black;font-weight:bold;font-size:18px;">Trainer’s Name</p>
                                     <span>{{$chapter_details[0]['trainer_name']}}</span>
                                 </a>
                             </li>
@@ -210,10 +210,24 @@
                             
                             <li>
                                 <a class="justify-content-between d-flex" href="#">
-                                    <p>Estimated time</p>
+                                    <p style="color:black;font-weight:bold;font-size:18px;">Estimated time</p>
                                     <span>{{$chapter_details[0]['course_duration']}}</span>
                                 </a>
                             </li>
+
+                            <li>
+                                    <a class="justify-content-between d-flex" href="#">
+                                        <p style="color:black;font-weight:bold;font-size:18px;">Course Fee</p>
+                                        <span><strike style="color:red;">Rs 2999</strike></span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                        <a class="justify-content-between d-flex" href="#">
+                                            <p style="color:black;font-weight:bold;font-size:18px;">Member Fee</p>
+                                            <span>Free</span>
+                                        </a>
+                                    </li>
 
                         </ul>
 
@@ -251,9 +265,6 @@
                         where('course_id',$all_cou->course_id)
                         ->first();
 
-                        
-
-
                         ?>
                             <div class="comments-area mb-30">
                                 <div class="comment-list">
@@ -289,22 +300,27 @@
     <footer class="footer-area">
         <div class="container">
             <div class="row justify-content-between">
-                <div class="col-sm-6 col-md-4 col-xl-3">
+                <div class="col-sm-6 col-md-4 col-xl-4">
                     <div class="single-footer-widget footer_1">
-                        <a href="https://brandsamosa.com"> <img src="theme/img/logo (3).png" alt="" height="100" width="100"> </a>
-                     
+                        <a href="https://brandsamosa.com"> <img src="theme/img/logo (3).png" alt="" height="80" width="80"> </a>
+                        <p>We build brands that “SELL”.
+We help Small Businesses, Startups and Professionals win in the digital world by providing Affordable, Customised and Innovative Social Branding & Sales solutions. Build your Brand, Improve Sales and Leverage Social Media for Business Growth.</p>
+                        
+                        <a href="https://brandsamosa.com" style="text-decoration:none;color:#888888;">Get it touch with us for a FREE business consultation about your business or brand.</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-xl-4">
                     <div class="single-footer-widget footer_2">
                         <h4>Follow us</h4>
-                        <p>Stay updated with our latest trends Seed heaven so said place winged over given forth fruit.
+                        <p>Stay tuned with our latest updates about industry trends, actionable tips, detailed case studies, client testimonials, events and webinars and much more.
+
                         </p>
                         
                         <div class="social_icon">
-                            <a href="https://www.facebook.com/brandsamosa/?modal=admin_todo_tour"> <i class="ti-facebook"></i> </a>
-                            <a href="https://twitter.com/BrandSamosa"> <i class="ti-twitter-alt"></i> </a>
-                            <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fbrandsamosa%2Fabout"> <i class="ti-linkedin"></i> </a>
+                            <a href="https://www.facebook.com/brandsamosa/?modal=admin_todo_tour"> <i class="ti-facebook" style="color:#3B5998;font-size:25px;"></i> </a>
+                            <a href="https://twitter.com/BrandSamosa"> <i class="ti-twitter-alt" style="color:#1DA1F2;font-size:25px;"></i> </a>
+                            <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fbrandsamosa%2Fabout"> <i class="ti-linkedin" style="color:#007DA9;font-size:25px;"></i> </a>
+                           
                         </div>
                     </div>
                 </div>

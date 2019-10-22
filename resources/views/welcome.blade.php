@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="theme/css/slick.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="theme/css/style.css">
+
+    <!--Font Awesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -121,7 +124,7 @@
                             <h5>Your gateway to Social Branding</h5>
                             <h1>Build your Brand, Sell More and Grow your Influence</h1>
                             <p>Welcome to Brand Samosa Academy. Explore and join practical and customized courses to help you build and grow your brand. Each course comes with highly practical action points with a super helpful support team.</p>
-                            <a href="#popular_courses" class="btn_1">View Course </a>
+                            <a href="#popular_courses" class="btn_1">View Courses </a>
                             <a href="{{route('register')}}" class="btn_2">Subscribe</a>
                         </div>
                     </div>
@@ -136,18 +139,28 @@
     <section class="learning_part" id="learning_part">
         <div class="container">
             <div class="row align-items-sm-center align-items-lg-stretch">
-                <div class="col-md-7 col-lg-7">
+                <div class="col-md-6 col-lg-6">
                     <div class="learning_img">
                         <img src="theme/img/learning_img.png" alt="">
                     </div>
                 </div>
-                <div class="col-md-5 col-lg-5">
+                <div class="col-md-6 col-lg-6">
                     <div class="learning_member_text">
-                        <h5>About us</h5>
-                        <h2>We build brands that “SELL”.</h2>
-                        <p>We help Small Businesses, Startups and Professionals win in the digital world by providing Affordable, Customised and Innovative Social Branding & Sales solutions.
+                        <h6 style="text-transform:uppercase;color:#888888;">One subscription to everything you ever needed</h6>
+                        <h3>Learn everything about Branding, Marketing, Sales and Social Media from industry experts</h3>
+                        <p>Get unlimited access to courses, e-books, webinars, events and much more!!    </p>
+                            <p><b>Register now at &#8377; 79/- per month.</b></p>
+                            <ul style="list-style-type:none;font-size:16px;">You will get:
+                            <li><i class="fa fa-check"></i> Learning in Branding, Sales, Marketing and Social Media from industry experts.</li>
+                            <li><i class="fa fa-check"></i> 30+ hours of video content.</li><br>
+                            <li><i class="fa fa-check"></i> 20+ e-books and case studies</li><br>
+                            <li><i class="fa fa-check"></i> FREE entry into webinars</li><br>
+                            <li><i class="fa fa-check"></i> Discounted entry into events</li><br>
+                            <li><i class="fa fa-check"></i> Full access to the exclusive community</li><br>
+                            <li> and much more...</li>
 
-                            Build your Brand, Improve Sales and Leverage Social Media for Business Growth.</p>
+                            </ul>
+                       
                      
                             <a href="{{route('register')}}" class="btn_2">Subscribe</a>
                     </div>
@@ -198,7 +211,7 @@
                                     <img src="theme/img/author/trainer.jpg" alt="" style="border-radius:50%;">
                                     <div class="author_info_text">
                                         <p>Conducted by:</p>
-                                    <h5><a>{{$course_details[0]->trainer_name}}</a></h5>
+                                    <h5><a target="blank" href="https://www.linkedin.com/in/sambaisla">{{$course_details[0]->trainer_name}}</a></h5>
                                     </div>
                                 </div>
                              
@@ -223,22 +236,26 @@
     <footer class="footer-area" id="footer">
         <div class="container">
             <div class="row justify-content-between">
-                <div class="col-sm-6 col-md-4 col-xl-3">
+                <div class="col-sm-6 col-md-4 col-xl-4">
                         <div class="single-footer-widget footer_1">
-                                <a href="https://brandsamosa.com"> <img src="theme/img/logo (3).png" alt="" height="100" width="100"> </a>
-                             
-                            </div>
+                                <a href="https://brandsamosa.com"> <img src="theme/img/logo (3).png" alt="" height="80" width="80"> </a>
+                             <p>We build brands that “SELL”.
+We help Small Businesses, Startups and Professionals win in the digital world by providing Affordable, Customised and Innovative Social Branding & Sales solutions. Build your Brand, Improve Sales and Leverage Social Media for Business Growth.</p>
+                        
+                        <a href="https://brandsamosa.com" style="text-decoration:none;color:#888888;">Get it touch with us for a FREE business consultation about your business or brand.</p>
+                         </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-xl-4">
                     <div class="single-footer-widget footer_2">
                         <h4>Follow us</h4>
-                        <p>Stay updated with our latest trends.
+                        <p>Stay tuned with our latest updates about industry trends, actionable tips, detailed case studies, client testimonials, events and webinars and much more.
+
                         </p>
                         
                         <div class="social_icon">
-                            <a href="https://www.facebook.com/brandsamosa/?modal=admin_todo_tour"> <i class="ti-facebook"></i> </a>
-                            <a href="https://twitter.com/BrandSamosa"> <i class="ti-twitter-alt"></i> </a>
-                            <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fbrandsamosa%2Fabout"> <i class="ti-linkedin"></i> </a>
+                            <a href="https://www.facebook.com/brandsamosa/?modal=admin_todo_tour"> <i class="ti-facebook" style="color:#3B5998;font-size:25px;"></i> </a>
+                            <a href="https://twitter.com/BrandSamosa"> <i class="ti-twitter-alt" style="color:#1DA1F2;font-size:25px;"></i> </a>
+                            <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fbrandsamosa%2Fabout"> <i class="ti-linkedin" style="color:#007DA9;font-size:25px;"></i> </a>
                            
                         </div>
                     </div>

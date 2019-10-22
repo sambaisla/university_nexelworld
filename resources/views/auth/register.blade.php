@@ -42,16 +42,28 @@ background-size: cover;
 
 </style>
 <body>
-<div class="text-center container" style="height:100px;margin-top:20px;margin-bottom:20px;">
-<h4 style="background:#ffffb3;border-radius:10px;padding:10px;box-sizing:border-box;"><i> Get access to unlimited courses at a very low price</i></h4>
+<div class="container card col-md-9" style="margin-top:20px;margin-bottom:20px;background:#ffffff;border-radius:10px;padding:10px;box-sizing:border-box;box-shadow: 5px 5px 8px #e6e6e6;">
+<h4 class="text-center">Get unlimited access to courses, e-books, webinars, events and much more!!</h4>
+<h5 style="color:green;text-shadow:0 0 2px green;text-indent: 55px;
+">Register now at &#8377;<i>79 per month</i></h5>
+<ul style="list-style-type:none;text-indent:15px;"><b>You will get:</b>
+<li><i class="fa fa-check"></i> Learning in Branding, Sales, Marketing and Social Media from industry experts.</li>
+<li><i class="fa fa-check"></i> 30+ hours of video content.</li>
+<li><i class="fa fa-check"></i> 20+ e-books and case studies</li>
+<li><i class="fa fa-check"></i> FREE entry into webinars</li>
+<li><i class="fa fa-check"></i> Discounted entry into events</li>
+<li><i class="fa fa-check"></i> Full access to the exclusive community</li>
+<li> and much more...</li>
+
+</ul>
 </div>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card" style="background-color:#002699;">
+            <div class="card" style="background-color:#a04655;">
                <b> <div class="card-header text-center" style="font-size:25px;color:#ffffff;">{{ __('Register') }}</div></b>
 
-                <div class="card-body" style="background-color:#e6ecff; font-size:18px;">
+                <div class="card-body" style="background-color:#EBD199; font-size:18px;">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -153,7 +165,7 @@ background-size: cover;
                                     {{ __('Register') }}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('login') }}"> Already have an account? Login.</a>
+                                <a class="btn btn-link" style="color:#9B4352;" href="{{ route('login') }}"> Already have an account? Login.</a>
 
                             </div>
                         </div>
