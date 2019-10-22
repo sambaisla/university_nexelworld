@@ -52,7 +52,7 @@ header.masthead h1 {
 }
 
 .showcase .showcase-text {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .showcase .showcase-img {
@@ -62,7 +62,7 @@ header.masthead h1 {
 
 @media (min-width: 768px) {
   .showcase .showcase-text {
-    padding: 5rem;
+    padding: 2rem;
   }
 }
 
