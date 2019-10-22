@@ -106,7 +106,7 @@
                             <div class="page-title-wrapper">
                                 <div class="page-title-heading">
                                    
-                                  <div>  <b> Welcome to your dashboard </b>
+                                  <div>  <b>Enjoy your course</b>
                                        
                                     </div>
                                 </div>
@@ -185,49 +185,103 @@
                        @endif           
 
      
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="main-card mb-3 card bg-midnight-bloom">
-                        <div class="card-body">
-                            <h4 style="color:white;font-weight:bold;"> Enjoy your courses</h4><hr>
-                            <p style="color:white;font-size:16px;">Watch chapters and earn 10 credit points. </p>
-                            <p style="color:white;font-size:16px;">Refer your friend and earn 100 credits. </p>
 
+                       <?php
+                       $chapters_completed=\App\chapters_completed_user_details::where('course_id',$course_id)
+                                                       ->where('user_id',Auth::User()->id) 
+                                                       ->count();
+                       $total_chapter=\App\course::where('course_id',$course_id)->count();                                
+                       $actual_completed_chapters=$chapters_completed-1;
+                    //    echo "<pre>";print_r($total_chapter);die;
+                       
+                       ?>
 
-                        </div>
-                        </div>
-                  
-                  
-                </div>
-              
-                
+@if($actual_completed_chapters==$total_chapter)
+
+<div class="row">
+<div class="col-lg-12 col-xl-8">
+    <div class="card mb-3 widget-content justify-content-center">
+        <div class="widget-content-wrapper">
+            <div class="widget-content-left">
+                <div class="widget-heading">Congratulations !! You have completed this course.</div>
+                <div class="widget-subheading"><a href="{{url('home')}}">Explore our others courses.</a></div>
             </div>
+            <div class="widget-content-right">
+                <div class="widget-numbers text-warning">Wallet-<span>{{Auth::User()->credits}}</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+@endif
+
+
+        
+
+                       <div class="row">
+                       <div class="col-md-12">
+                        <div class="main-card mb-3 card">
+                            <div class="card-body"><h5 class="card-title">List of chapters</h5>
+                                <ul class="list-group">
+
+                                    @foreach($course_details as $chapters)
+                                    <?php
+                                    $chapters_completed_user_details=\App\chapters_completed_user_details::where('course_id',$course_id)
+                                                                    ->where('user_id',Auth::User()->id) 
+                                                                    ->where('chapter_id',$chapters->chapter_id)                
+                                                                    ->first();
+                                    
+                                    
+                                    ?>
+                                    <li class="list-group-item"><h5 class="list-group-item-heading"><a style="color:black;" href="{{url('user_watching_chapter-'.$course_id.'-'.$chapters->chapter_id)}}">{{$chapters->chapter_name}}</a></h5>
+                                        <p class="list-group-item-text">{{$chapters->chapter_details}}</p>
+                                    </li>
+                                  
+                                   @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                       </div>
+     
 
 
 
-            <div class="row">
 
-                @foreach($course as $val)
+@if(count($other_courses)>0)
+<hr>
+<h4>Explore other courses</h4>
+<br>
+
+        <div class="row">
+
+                @foreach($other_courses as $val)
 
                 <?php
-                    $course_details=\App\course::where('course_id',$val->course_id)
-                                   ->first();
+                    $othercourse=\App\course::where('course_id',$val->course_id)
+                                ->first();
                 ?>
                     <div class="col-lg-6 col-xl-4">
                             <div class="card mb-3 widget-content bg-midnight-bloom">
                                 <div class="widget-content-wrapper">
                                 
                                     <div class="widget-content-left">
-                                       <h4 style="color:whitesmoke;">{{$course_details->course_name}} </h4>                                
-                                        <div class="widget-heading" style="color:white;">Duration: {{$course_details->course_duration}}</div>
+                                    <h4 style="color:whitesmoke;">{{$othercourse->course_name}} </h4>                                
+                                        <div class="widget-heading" style="color:white;">Duration: {{$othercourse->course_duration}}</div>
                                         <br>                                       
-                                        <button type="submit" onclick="window.location='{{ url("user_watched_courses-$course_details->course_id") }}'" class="mb-2 mr-2 btn btn-warning" value="Buy Course">Watch</button>
+                                        <button type="submit" onclick="window.location='{{ url("user_watched_courses-$othercourse->course_id") }}'" class="mb-2 mr-2 btn btn-warning" value="Buy Course">Watch</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                 @endforeach
             </div>
+
+@endif
+
+
+
                   
                 <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
         </div>

@@ -149,4 +149,35 @@ class Courses extends Controller
     }
 
 
+
+    public function user_watched_courses($course_id)
+    {
+        $user_id=Auth::User()->id;
+       $course_watched_count = \App\chapters_completed_user_details::where('user_id',$user_id)
+       ->where('course_id',$course_id)
+       ->count();
+      
+    //    echo "<pre>";print_r($course_watched_count);die;
+
+                if($course_watched_count==0)
+                {
+                    DB::table('chapters_completed_user_details')->insert(
+                        [
+                            'user_id' => $user_id, 
+                            'course_id' => $course_id,
+                            'chapter_id'=>1,
+                        ]
+                    );
+                }
+          
+
+              
+                return redirect()->route('course_chapters', $course_id);
+            
+
+
+                 
+    }
+
+
 }

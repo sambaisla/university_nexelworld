@@ -90,33 +90,35 @@ class HomeController extends Controller
          $course_id=$data['course_id'];
          $chapter_id=$data['chapter_id'];
          $user_id=Auth::User()->id;
-      
+        // echo "<pre>";print_r($data);die;
         
 
-         $course_details_for_copletion= DB::table('courses')
-         ->select('course_completed_by')
-         ->where('course_id', $course_id)
-         ->where('chapter_id',$chapter_id)
-         ->get()
-         ->toArray();
+         $course_watched_count = \App\chapters_completed_user_details::where('user_id',$user_id)
+         ->where('course_id',$course_id)
+         ->count();
+        
+  
+                  if($course_watched_count==0)
+                  {
+                      DB::table('chapters_completed_user_details')->insert(
+                          [
+                              'user_id' => $user_id, 
+                              'course_id' => $course_id,
+                              'chapter_id'=>1,
+                          ]
+                      );
+                  }
+                  else{
+                      DB::table('chapters_completed_user_details')->insert(
+                          [
+                              'user_id' => $user_id, 
+                              'course_id' => $course_id,
+                              'chapter_id'=>$course_watched_count+1,
+                          ]
+                      );
+                  }
  
-        $course_completed_by=$course_details_for_copletion[0]->course_completed_by;
- 
- 
-         if($course_completed_by==NULL)
-         {
-             $course_completed_by=$user_id;
-         }
-         else{
-             $array=array($course_completed_by);
-             array_push($array,$user_id);
-             $course_completed_by=implode(',',$array);
- 
-         }
-         $update = DB::table('courses')
-             ->where('course_id', $course_id)
-             ->where('chapter_id', $chapter_id)
-             ->update(['course_completed_by' => $course_completed_by]);
+      
 
              
 //update user table for earned credits 
@@ -154,10 +156,14 @@ class HomeController extends Controller
 
 
 
+            $user_last_record=DB::table('chapters_completed_user_details')
+            ->where('user_id',$user_id)
+            ->where('course_id',$course_id)
+            ->orderBy('id', 'desc')
+            ->first();
+// echo "<pre>";print_r($user_last_record);die;
 
-
-
-             return Redirect::route('home')->with('success', 'Congrats !! you have earned 10 credits. Next chapter is unlocked !!');
+             return Redirect::route('course_chapters',$course_id)->with('success', 'Congrats !! you have earned 10 credits. Next chapter is unlocked !!');
 
           
     }

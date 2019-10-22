@@ -87,3 +87,105 @@ Route::get('/refer_friend', 'HomeController@refer_friend')->name('refer_friend')
 Route::get('/user_reference/{user_id}/{reference_number}', 'PaymentController@user_reference')->name('user_reference');
 
 Route::post('/reference_join_post', 'PaymentController@reference_join_post')->name('reference_join_post');
+
+Route::get('/user_watched_courses-{course_id}', 'Courses@user_watched_courses')->name('user_watched_courses');
+
+Route::get('/course_chapters-{course_id}',function($course_id){
+    $course_details=\App\course::where('course_id',$course_id)
+                    ->get();
+
+                    $other_courses=\App\course::select('course_id')
+                    ->distinct()
+                    ->where('course_id','!=',$course_id)
+                    ->get();
+    
+    return view('course_chapters',compact('course_id','course_details','other_courses'));
+})->name('course_chapters');
+
+Route::get('/user_watching_chapter-{course_id}-{chapter_id}',function($course_id,$chapter_id){
+ 
+    $user_id=Auth::User()->id;
+    $other_courses=\App\course::select('course_id')
+    ->distinct()
+    ->where('course_id','!=',$course_id)
+    ->get();
+   
+    $selected_chapter_details=\App\course::where('course_id',$course_id)
+    ->where('chapter_id',$chapter_id)
+    ->get();
+
+    $course_watched_count = \App\chapters_completed_user_details::where('user_id',$user_id)
+    ->where('course_id',$course_id)
+    ->count();
+
+    
+
+    if($course_watched_count==1){
+                $user_last_record=DB::table('chapters_completed_user_details')
+                ->where('user_id',$user_id)
+                ->where('course_id',$course_id)
+                ->orderBy('id', 'desc')
+                ->first();
+
+                $last_watched_chapter_id=$user_last_record->chapter_id;
+                $chapter_id_next=$last_watched_chapter_id;
+
+                if($chapter_id!=$chapter_id_next)
+                {
+                    return Redirect::route('course_chapters',$course_id);
+
+                }
+                else{
+                    return view('user_chapter',compact('course_id','other_courses','selected_chapter_details','chapter_id'));
+
+                }
+    }
+    elseif($course_watched_count==2)
+    {
+        $user_last_record=DB::table('chapters_completed_user_details')
+        ->where('user_id',$user_id)
+        ->where('course_id',$course_id)
+        ->orderBy('id', 'desc')
+        ->first();
+
+        // echo "<pre>";print_r($course_watched_count);die; 
+        $last_watched_chapter_id=$user_last_record->chapter_id;
+        $chapter_id_next=$last_watched_chapter_id;
+
+        if($chapter_id!=$chapter_id_next)
+        {
+            return Redirect::route('course_chapters',$course_id);
+
+        }
+        else{
+            return view('user_chapter',compact('course_id','other_courses','selected_chapter_details','chapter_id'));
+
+        }
+    }
+    elseif($course_watched_count>2)
+    {
+            $user_last_record=DB::table('chapters_completed_user_details')
+            ->where('user_id',$user_id)
+            ->where('course_id',$course_id)
+            ->orderBy('id', 'desc')
+            ->first();
+
+            $last_watched_chapter_id=$user_last_record->chapter_id;
+            $chapter_id_next=$last_watched_chapter_id;
+
+            if($chapter_id!=$chapter_id_next)
+            {
+                return Redirect::route('course_chapters',$course_id);
+
+            }
+            else{
+                return view('user_chapter',compact('course_id','other_courses','selected_chapter_details','chapter_id'));
+
+            }
+          
+
+    }
+
+
+
+})->name('user_watching_chapter');
