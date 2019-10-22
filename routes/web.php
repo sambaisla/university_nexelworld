@@ -195,3 +195,24 @@ Route::get('/my_courses', 'Courses@my_courses')->name('my_courses');
 Route::get('/launchpad',function(){
     return view('launchpad');
 });
+
+
+
+
+Route::get('/lp_invite-{reference_number}', 'PaymentController@lp_invite')->name('lp_invite');
+Route::get('/invite_registration_form/{real_reference_number}',function($real_reference_number){
+    
+    // echo $real_reference_number;die;
+    return view('invite_registration_form',compact('real_reference_number'));
+})->name('invite_registration_form');
+
+
+Route::post('/post_invite_register', 'PaymentController@post_invite_register')->name('post_invite_register');
+
+Route::get('/lp_invite_dashboard',function(){
+
+    $course=\App\course::select('course_id')
+    ->distinct()
+    ->get();
+    return view('home',compact('course'));
+});
