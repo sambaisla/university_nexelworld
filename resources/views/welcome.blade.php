@@ -225,7 +225,7 @@
             <div class="row justify-content-between">
                 <div class="col-sm-6 col-md-4 col-xl-3">
                         <div class="single-footer-widget footer_1">
-                                <a href="https://brandsamosa.com"> <img src="theme/img/logo.png" alt=""> </a>
+                                <a href="http://university.nexelworld.com"> <img src="theme/img/logo.png" alt=""> </a>
                              
                             </div>
                 </div>
