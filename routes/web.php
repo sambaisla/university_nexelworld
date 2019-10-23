@@ -216,3 +216,10 @@ Route::get('/lp_invite_dashboard',function(){
     ->get();
     return view('home',compact('course'));
 });
+
+Route::get('/registration_for_launchpad',function()
+{
+    return view('registration_for_launchpad');
+});
+
+Route::post('/registration_for_launchpad','Courses@registration_for_launchpad')->name('registration_for_launchpad');

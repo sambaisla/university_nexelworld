@@ -12,7 +12,7 @@ use Redirect;
 use App\User;
 use Mail;
 use App\Mail\PasswordChange;
-
+use Illuminate\Support\Facades\Hash;
 
 class Courses extends Controller
 {
@@ -184,6 +184,23 @@ class Courses extends Controller
         ->get();
         return view('my_courses',compact('course'));
  
+    }
+
+    public function registration_for_launchpad(Request $request)
+    {
+        $data = $request->all();
+        // echo "<pre>";print_r($data);die;
+
+   
+        $user_id=DB::table('users')->insertGetId(
+            ['credits'=>0,'name' => $data['name'],'email'=>$data['email'],'mobile_number'=>$data['mobile_number'],'profession'=>$data['profession'],'purpose'=>$data['purpose'],'password'=>Hash::make($data['password'])]
+        );
+
+        $course=\App\course::select('course_id')->distinct()->get();
+        $user = \App\User::where('id','=',$user_id)->first();
+        Auth::login($user);
+        
+        return view('home',compact('course'));
     }
 
 

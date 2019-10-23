@@ -44,7 +44,7 @@ background-size: cover;
 <body>
 <div class="container card col-md-9" style="margin-top:20px;margin-bottom:20px;background:#ffffff;border-radius:10px;padding:10px;box-sizing:border-box;box-shadow: 5px 5px 8px #e6e6e6;">
 <h4 class="text-center" style="font-size:1.3rem;">Get unlimited access for a FULL YEAR to courses, e-books, webinars, events and much more!!</h4>
-<h5 style="color:green;text-shadow:0 0 2px green;text-indent: 55px;
+<h5 style="color:green;text-shadow:0 0 1px green;text-indent: 55px;
 ">Register now at &#8377;<i>79/- per month</i></h5>
 <ul style="list-style-type:none;text-indent:15px;"><b>You will get:</b>
 <li><i class="fa fa-check"></i>  Learn about Preparing Business Plan, Go to Market Strategy, Bootstrapping, Growth and Expansion, Fund-raising, and everything else from industry experts.</li>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Famore</title>
+    <title>Nexel World Academy</title>
   <meta name='viewport' content="width=device-width, initial-scale=1" />
   {{-- <link href="{{ URL::asset('css/login.css') }}" rel="stylesheet"> --}}
   <link rel="icon" type="image/png" href="../assets1/img/famore_favicon.png">

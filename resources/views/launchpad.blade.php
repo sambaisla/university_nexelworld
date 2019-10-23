@@ -83,6 +83,7 @@
     </div>
   </section>
 
+<h4 class="text-center">Last date to apply : <span style=" text-shadow: 2px 2px 8px #ffff99;">31st October, 2019</span></h4>
   <!-- Testimonials -->
   <section class="testimonials text-center bg-light">
     <div class="container">
@@ -122,7 +123,7 @@
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
          
          
-                <a class="btn btn-lg btn-primary" href="{{url('/register')}}">Apply Now</a>
+                <a class="btn btn-lg btn-primary" href="{{url('/registration_for_launchpad')}}">Apply Now</a>
 
           
        

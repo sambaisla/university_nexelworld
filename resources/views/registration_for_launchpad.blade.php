@@ -16,6 +16,9 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+<!--Font Awesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
@@ -25,6 +28,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
+
 
 
 <style>
@@ -38,9 +42,20 @@ background-size: cover;
 
 </style>
 <body>
-<div class="container" style="height:100px;">
+<div class="container card col-md-9" style="margin-top:20px;margin-bottom:20px;background:#ffffff;border-radius:10px;padding:10px;box-sizing:border-box;box-shadow: 5px 5px 8px #e6e6e6;">
+<h4 class="text-center" style="font-size:1.3rem;">Get unlimited access for a FULL YEAR to courses, e-books, webinars, events and much more!!</h4>
+<h5 style="color:green;text-shadow:0 0 1px green;text-indent: 55px;
+">Register now at &#8377;<i>79/- per month</i></h5>
+<ul style="list-style-type:none;text-indent:15px;"><b>You will get:</b>
+<li><i class="fa fa-check"></i>  Learn about Preparing Business Plan, Go to Market Strategy, Bootstrapping, Growth and Expansion, Fund-raising, and everything else from industry experts.</li>
+<li><i class="fa fa-check"></i> 30+ hours of video content.</li>
+<li><i class="fa fa-check"></i> 20+ e-books and case studies</li>
+<li><i class="fa fa-check"></i> FREE entry into webinars</li>
+<li><i class="fa fa-check"></i> Discounted entry into events</li>
+<li><i class="fa fa-check"></i> Full access to the exclusive community</li>
+<li> and much more...</li>
 
-
+</ul>
 </div>
 <div class="container">
     <div class="row justify-content-center">
@@ -49,12 +64,8 @@ background-size: cover;
                <b> <div class="card-header text-center" style="font-size:25px;color:#ffffff;">{{ __('Register') }}</div></b>
 
                 <div class="card-body" style="background-color:#EBD199; font-size:18px;">
-                    <form method="POST" action="{{ route('reference_join_post') }}">
+                    <form method="POST" action="{{ route('registration_for_launchpad') }}">
                         @csrf
-
-
-                        <input name="refered_by_user_id" type="hidden" value="{{$user_id}}">
-                        <input name="reference_code" type="hidden" value="{{$reference_number}}">
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
@@ -121,7 +132,20 @@ background-size: cover;
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="purpose" class="col-md-4 col-form-label text-md-right">{{ __('Purpose') }}</label>
 
+                            <div class="col-md-6">
+                                   
+                                <input id="purpose" type="text" class="form-control @error('purpose') is-invalid @enderror" name="purpose" value="Launchpad Application" required autocomplete="purpose" readonly>
+
+                                @error('purpose')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
 
 
@@ -154,11 +178,13 @@ background-size: cover;
                                     {{ __('Register') }}
                                 </button>
 
+                                <a class="btn btn-link" style="color:#9B4352;" href="{{ route('login') }}"> Already have an account? Login.</a>
 
                             </div>
                         </div>
                     </form>
                 </div>
+                
             </div>
         </div>
     </div>
