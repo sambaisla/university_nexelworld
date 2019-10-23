@@ -42,24 +42,20 @@ background-size: cover;
 
 </style>
 <body>
-<div class="container card col-md-9" style="margin-top:20px;margin-bottom:20px;background:#ffffff;border-radius:10px;padding:10px;box-sizing:border-box;box-shadow: 5px 5px 8px #e6e6e6;">
-<h4 class="text-center" style="font-size:1.3rem;">Get unlimited access for a FULL YEAR to courses, e-books, webinars, events and much more!!</h4>
-<h5 style="color:green;text-shadow:0 0 1px green;text-indent: 55px;
-">Register now at &#8377;<i>79/- per month</i></h5>
-<ul style="list-style-type:none;text-indent:15px;"><b>You will get:</b>
-<li><i class="fa fa-check"></i>  Learn about Preparing Business Plan, Go to Market Strategy, Bootstrapping, Growth and Expansion, Fund-raising, and everything else from industry experts.</li>
-<li><i class="fa fa-check"></i> 30+ hours of video content.</li>
-<li><i class="fa fa-check"></i> 20+ e-books and case studies</li>
-<li><i class="fa fa-check"></i> FREE entry into webinars</li>
-<li><i class="fa fa-check"></i> Discounted entry into events</li>
-<li><i class="fa fa-check"></i> Full access to the exclusive community</li>
-<li> and much more...</li>
 
-</ul>
-</div>
-<div class="container">
+<div class="container" style="margin-top:2em;">
     <div class="row justify-content-center">
         <div class="col-md-8">
+
+        @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
             <div class="card" style="background-color:#a04655;">
                <b> <div class="card-header text-center" style="font-size:25px;color:#ffffff;">{{ __('Register') }}</div></b>
 
@@ -73,11 +69,7 @@ background-size: cover;
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                              
                             </div>
                         </div>
 
@@ -87,11 +79,7 @@ background-size: cover;
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                             
                             </div>
                         </div>
 
@@ -101,11 +89,7 @@ background-size: cover;
                             <div class="col-md-6">
                                 <input id="mobile_number" type="tel" class="form-control @error('mobile_number') is-invalid @enderror" name="mobile_number" value="{{ old('mobile_number') }}" required autocomplete="mobile_number">
 
-                                @error('mobile_number')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                              
                             </div>
                         </div>
 
@@ -124,11 +108,7 @@ background-size: cover;
                                     </select>
                                 {{-- <input id="profession" type="text" class="form-control @error('profession') is-invalid @enderror" name="profession" value="{{ old('profession') }}" required autocomplete="profession"> --}}
 
-                                @error('profession')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                               
                             </div>
                         </div>
 
@@ -139,11 +119,7 @@ background-size: cover;
                                    
                                 <input id="purpose" type="text" class="form-control @error('purpose') is-invalid @enderror" name="purpose" value="Launchpad Application" required autocomplete="purpose" readonly>
 
-                                @error('purpose')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                               
                             </div>
                         </div>
 
@@ -156,11 +132,6 @@ background-size: cover;
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                             </div>
                         </div>
 
