@@ -242,10 +242,8 @@
                 <div class="col-sm-6 col-md-4 col-xl-4">
                         <div class="single-footer-widget footer_1">
                                 <a href="https://nexelworld.com"> <img src="theme/img/logo.png" alt=""> </a>
-                             <p>We build brands that “SELL”.
-We help Small Businesses, Startups and Professionals win in the digital world by providing Affordable, Customised and Innovative Social Branding & Sales solutions. Build your Brand, Improve Sales and Leverage Social Media for Business Growth.</p>
+                             <p>We are inspiring and empowering next generation entrepreneurs and leaders of the world. Our mission is to help them create a better world and solve critical problems.</p>
                         
-                        <a href="https://nexelworld.com" style="text-decoration:none;color:#888888;">Get it touch with us for a FREE business consultation about your business or brand.</p>
                          </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-xl-4">
