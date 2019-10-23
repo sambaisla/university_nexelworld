@@ -209,7 +209,30 @@
                             
                         </div>
             
-            
+                       <?php
+                        $course_completion_details=\App\chapters_completed_user_details::where('user_id',Auth::User()->id)
+                       
+                        ->first();
+                        
+                        ?>
+						 @if($course_completion_details['completion_status']==1)
+						 <div class="row justify-content-center" >
+							<div class="col-md-6 col-lg-6">
+
+							   
+								<div class="card-shadow-danger mb-3 widget-chart widget-chart2 text-left card">
+									<div class="widget-content">
+										<div class="widget-content-outer">
+										   
+											<div class="widget-content-left fsize-1">
+												<div class="opacity-8 text-center"><b><span style="color:red;">Congrats !! You have completed this course. Start again..</span></b></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						 @endif
             
                         <hr>
                         <div class="row justify-content-center" >
