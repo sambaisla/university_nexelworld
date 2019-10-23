@@ -122,8 +122,8 @@
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
          
          
-                <button type="submit" class="btn btn-lg btn-primary">Apply Now</button>
-           
+                <a class="btn btn-lg btn-primary" href="{{url('/register')}}">Apply Now</a>
+
           
        
         </div>
