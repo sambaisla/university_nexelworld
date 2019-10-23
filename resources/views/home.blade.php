@@ -251,8 +251,22 @@
                                         <div class="widget-heading" style="color:white;"><span style="font-size:15px;">Member price</span> : Free</div>
                                         
                                         <br>                                       
+                                        <?php
+                                        $course_completion_details=\App\chapters_completed_user_details::where('user_id',Auth::User()->id)
+                                        ->where('course_id',$val->course_id)
+                                        ->first();
+                                        // echo "<pre>";print_r($course_completion_details->completion_status);
+                                        
+                                        ?>
+
+                                            @if($course_completion_details['completion_status']==1)
+                                        <button type="submit" onclick="window.location='{{ url("user_watched_courses-$course_details->course_id") }}'" class="mb-2 mr-2 btn btn-warning" value="Buy Course">Watch Again</button>
+
+
+                                            @else 
                                         <button type="submit" onclick="window.location='{{ url("user_watched_courses-$course_details->course_id") }}'" class="mb-2 mr-2 btn btn-warning" value="Buy Course">Watch</button>
-                                    </div>
+                                    
+                                            @endif                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -180,6 +180,30 @@ class HomeController extends Controller
             ->where('course_id',$course_id)
             ->orderBy('id', 'desc')
             ->first();
+			
+			      $course_last_chapter=DB::table('courses')
+            ->where('course_id',$course_id)
+            ->orderBy('chapter_id', 'desc')
+            ->first();
+
+            $last_chapter_of_course=$course_last_chapter->chapter_id;
+            $user_last_chapter=$user_last_record->chapter_id;
+            if($last_chapter_of_course==$user_last_chapter-1)
+            {
+
+
+                $delete_records=\App\chapters_completed_user_details::where('user_id',$user_id)
+                ->where('course_id',$course_id)
+                ->delete();
+                    DB::table('chapters_completed_user_details')->insert(
+                        [
+                            'user_id' => $user_id, 
+                            'course_id' => $course_id,
+                            'chapter_id'=>1,
+                            'completion_status'=>1
+                        ]
+                    );
+            }
 // echo "<pre>";print_r($user_last_record);die;
 
              return Redirect::route('course_chapters',$course_id)->with('success', 'Congrats !! you have earned 10 credits. Next chapter is unlocked !!');

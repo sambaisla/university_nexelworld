@@ -270,7 +270,7 @@
         <div class="card mb-3 widget-content">
             <div class="widget-content-wrapper">
                 <div class="widget-content-center">
-                    <p><b>You have not started any course now. Please browse our courses below.</b></p>
+                    <p><b>You have not started any course yet. Choose a course below and click "watch" to start a course.</b></p>
                  
                 </div>
               
@@ -308,9 +308,26 @@
                                         <div class="widget-heading" style="color:white;">Duration: {{$othercourse->course_duration}}</div>
                                         <div class="widget-heading" style="color:white;"><span style="font-size:15px;">Course price</span> : <strike style="color:yellow;">Rs 2999</strike></div>
                                         <div class="widget-heading" style="color:white;"><span style="font-size:15px;">Member price</span> : Free</div>
-                                        <br>                                       
-                                        <button type="submit" onclick="window.location='{{ url("user_watched_courses-$othercourse->course_id") }}'" class="mb-2 mr-2 btn btn-warning" value="Buy Course">Watch</button>
-                                    </div>
+                                        <br> 
+
+                                       <?php
+                                        $course_completion_details=\App\chapters_completed_user_details::where('user_id',Auth::User()->id)
+                                        ->where('course_id',$val->course_id)
+                                        ->first();
+                                        // echo "<pre>";print_r($course_completion_details->completion_status);
+                                        
+                                        ?>	
+
+                                            @if($course_completion_details['completion_status']==1)
+										
+                                        <button type="submit" onclick="window.location='{{ url("user_watched_courses-$othercourse->course_id") }}'" class="mb-2 mr-2 btn btn-warning" value="Buy Course">Watch again</button>
+                                   
+										    @else 
+											<button type="submit" onclick="window.location='{{ url("user_watched_courses-$othercourse->course_id") }}'" class="mb-2 mr-2 btn btn-warning" value="Buy Course">Watch</button>
+
+											
+											@endif
+								   </div>
                                 </div>
                             </div>
                         </div>
