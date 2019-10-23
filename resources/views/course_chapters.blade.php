@@ -211,7 +211,8 @@
             
                        <?php
                         $course_completion_details=\App\chapters_completed_user_details::where('user_id',Auth::User()->id)
-                       
+                                                ->where('course_id',$course_id)
+
                         ->first();
                         
                         ?>
