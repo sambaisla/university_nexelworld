@@ -206,7 +206,7 @@ class HomeController extends Controller
             }
 // echo "<pre>";print_r($user_last_record);die;
 
-             return Redirect::route('course_chapters',$course_id)->with('success', 'Congrats !! you have earned 10 credits. Next chapter is unlocked !!');
+             return Redirect::route('course_chapters',$course_id)->with('success', 'Congrats !! you have earned 10 credits !!');
 
           
     }
