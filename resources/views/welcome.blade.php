@@ -124,9 +124,9 @@
                 <div class="col-lg-6 col-xl-6">
                     <div class="banner_text">
                         <div class="banner_text_iner">
-                            <h5>Your gateway to Social Branding</h5>
-                            <h1>Build your Brand, Sell More and Grow your Influence</h1>
-                            <p>Welcome to Brand Samosa Academy. Explore and join practical and customized courses to help you build and grow your brand. Each course comes with highly practical action points with a super helpful support team.</p>
+                            <h5>NEXEL Academy</h5>
+                            <h1>Become a next generation entrepreneur and leader</h1>
+                            <p>Welcome to NEXEL Academy. Here you will learn everything about Entrepreneurship and Leadership. Explore and join practical and customized courses programs to build the skills & mindset of a modern world entrepreneur and leader. Each course comes with highly practical action points with a super helpful support team.</p>
                             <a href="#popular_courses" class="btn_1">View Courses </a>
                             <a href="{{route('register')}}" class="btn_2">Subscribe</a>
                         </div>
@@ -150,11 +150,11 @@
                 <div class="col-md-6 col-lg-6">
                     <div class="learning_member_text">
                         <h6 style="text-transform:uppercase;color:#888888;">One subscription to everything you ever needed</h6>
-                        <h3>Learn everything about Branding, Marketing, Sales and Social Media from industry experts</h3>
-                        <p>Get unlimited access to courses, e-books, webinars, events and much more!!    </p>
+                        <h2>Learn everything about Entrepreneurship and Leadership</h2>
+                        <p>Get unlimited access for a <b>FULL YEAR</b> to courses, e-books, webinars, events and much more!!</p>
                             <p><b>Register now at &#8377; 79/- per month.</b></p>
                             <ul style="list-style-type:none;font-size:16px;">You will get:
-                            <li><i class="fa fa-check"></i> Learning in Branding, Sales, Marketing and Social Media from industry experts.</li>
+                            <li><i class="fa fa-check"></i> Learn about Preparing Business Plan, Go to Market Strategy, Bootstrapping, Growth and Expansion, Fund-raising, and everything else from industry experts.</li>
                             <li><i class="fa fa-check"></i> 30+ hours of video content.</li><br>
                             <li><i class="fa fa-check"></i> 20+ e-books and case studies</li><br>
                             <li><i class="fa fa-check"></i> FREE entry into webinars</li><br>
@@ -251,7 +251,7 @@ We help Small Businesses, Startups and Professionals win in the digital world by
                 <div class="col-sm-6 col-md-4 col-xl-4">
                     <div class="single-footer-widget footer_2">
                         <h4>Follow us</h4>
-                        <p>Stay tuned with our latest updates about industry trends, actionable tips, detailed case studies, client testimonials, events and webinars and much more.
+                        <p>Stay tuned with our latest updates about industry trends, actionable tips, detailed case studies, client testimonials, events, webinars and much more.
 
                         </p>
                         
