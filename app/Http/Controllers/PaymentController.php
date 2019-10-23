@@ -212,10 +212,12 @@ class PaymentController extends Controller
         
         $user = \App\User::where('id','=',$user_id)->first();
         Auth::login($user);
-
+        // echo "<pre>";print_r($data);die;
         $email=Auth::User()->email;
         $name=Auth::User()->name;
        
+      
+
         $refered_by_details=\App\User::where('id',$data['refered_by_user_id'])->first();
         $available_credits=$refered_by_details->credits;
 
@@ -224,7 +226,12 @@ class PaymentController extends Controller
         ->update(['credits'=>$available_credits+100]);
 
        
-            return view('payment_screen',compact('name','email'));
+        return view('payment_screen',compact('name','email'));
+
+        
+
+
+ 
     }
 
     public function lp_invite($reference_number)

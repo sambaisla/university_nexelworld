@@ -30,6 +30,19 @@ class HomeController extends Controller
 
         // echo "ddd";die;
 
+        $email=Auth::User()->email;
+        $name=Auth::User()->name;
+
+        // $to_name = $name;
+        //   $to_email = $email;
+        //   $data = array('name'=>$name, "body" => "Welcome to NEXEL Academy");
+              
+        //   Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
+        //       $message->to($to_email, $to_name)
+        //               ->subject('Welcome to NEXEL Academy');
+        //       $message->from('nexelacademy@gmail.com','');
+        //   });
+
         $course=\App\course::select('course_id')
         ->distinct()
         ->get();
@@ -39,8 +52,7 @@ class HomeController extends Controller
                     ->whereNotNull('payment_id')
                     ->get();
 
-        $email=Auth::User()->email;
-        $name=Auth::User()->name;
+        
         $lp_invite_ref_code=Auth::User()->lp_invite_ref_code;
         // echo $lp_invite_ref_code;die;
           $payment_id=Auth::User()->payment_id;
@@ -68,7 +80,7 @@ class HomeController extends Controller
                     }
           }
 
-
+          
      
     }
 
