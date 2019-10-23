@@ -41,18 +41,29 @@ class HomeController extends Controller
 
         $email=Auth::User()->email;
         $name=Auth::User()->name;
+        $lp_invite_ref_code=Auth::User()->lp_invite_ref_code;
+        // echo $lp_invite_ref_code;die;
           $payment_id=Auth::User()->payment_id;
 
-        if($payment_id==NULL)
-        {
-            return view('payment_screen',compact('name','email'));
-
-        }
-        else{
-          
+          if($lp_invite_ref_code=='erT45bnYuiOp')
+          {
             return view('home',compact('course'));
+          }
+          else{
+                    if($payment_id==NULL)
+                    {
+                        return view('payment_screen',compact('name','email'));
+            
+                    }
+                    else{
+                    
+                        return view('home',compact('course'));
+            
+                    }
+          }
 
-        }
+
+     
     }
 
     public function course_from_dashboard($course_id)
