@@ -236,10 +236,10 @@
 
 
 
-@if(count($course)>0)
+@if(count($user_course)>0)
             <div class="row" id="scroll_to">
 
-                @foreach($course as $val)
+                @foreach($user_course as $val)
 
                 <?php
                     $course_details=\App\course::where('course_id',$val->course_id)
@@ -270,7 +270,7 @@
         <div class="card mb-3 widget-content">
             <div class="widget-content-wrapper">
                 <div class="widget-content-center">
-                    <p><b>No course found </b></p>
+                    <p><b>You have not started any course now. Please browse our courses below.</b></p>
                  
                 </div>
               
@@ -280,6 +280,51 @@
 </div>
 
 @endif
+
+
+
+{{-- other courses  --}}
+
+
+@if(count($course)>0)
+<hr>
+<h4>Explore other courses</h4>
+<br>
+
+        <div class="row">
+
+                @foreach($course as $val)
+
+                <?php
+                    $othercourse=\App\course::where('course_id',$val->course_id)
+                                ->first();
+                ?>
+                    <div class="col-lg-6 col-xl-4">
+                            <div class="card mb-3 widget-content bg-midnight-bloom">
+                                <div class="widget-content-wrapper">
+                                
+                                    <div class="widget-content-left">
+                                    <h4 style="color:whitesmoke;">{{$othercourse->course_name}} </h4>                                
+                                        <div class="widget-heading" style="color:white;">Duration: {{$othercourse->course_duration}}</div>
+                                        <div class="widget-heading" style="color:white;"><span style="font-size:15px;">Course price</span> : <strike style="color:yellow;">Rs 2999</strike></div>
+                                        <div class="widget-heading" style="color:white;"><span style="font-size:15px;">Member price</span> : Free</div>
+                                        <br>                                       
+                                        <button type="submit" onclick="window.location='{{ url("user_watched_courses-$othercourse->course_id") }}'" class="mb-2 mr-2 btn btn-warning" value="Buy Course">Watch</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                @endforeach
+            </div>
+
+@endif
+
+
+
+{{-- end of other courses  --}}
+
+
+
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

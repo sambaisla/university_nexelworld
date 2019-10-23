@@ -177,12 +177,39 @@ class Courses extends Controller
     public function my_courses()
     {
         $user_id=Auth::User()->id;
-        $course=\App\chapters_completed_user_details::
+        $user_course=\App\chapters_completed_user_details::
         select('course_id')
         ->distinct()
         ->where('user_id',$user_id)
         ->get();
-        return view('my_courses',compact('course'));
+   
+        $watched_courses_array=array();
+        if(count($user_course)>0)
+        {
+            foreach($user_course as $val)
+            {
+                 $watched_courses_array[]=$val->course_id;
+            }
+        }
+        
+        if(count($watched_courses_array)>0)
+        {
+
+            $course=\App\course::
+            select('course_id')
+            ->distinct()
+            ->whereNotIn('course_id', $watched_courses_array)
+            ->get();
+        }
+        else{
+            $course=\App\course::
+            select('course_id')
+           ->distinct()
+           ->get();
+        }
+       
+      
+        return view('my_courses',compact('course','user_course'));
  
     }
 
