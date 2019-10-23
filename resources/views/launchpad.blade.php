@@ -83,28 +83,37 @@
     </div>
   </section>
 
-<h4 class="text-center">Last date to apply : <span style=" text-shadow: 2px 2px 8px #ffff99;">31st October, 2019</span></h4>
+<h4 class="text-center">"Applications close on 31st oct 2019. HURRY Up !" <span style=" text-shadow: 2px 2px 8px #ffff99;"><i>31st October, 2019</i></span></h4>
   <!-- Testimonials -->
   <section class="testimonials text-center bg-light">
     <div class="container">
       <h2 class="mb-5">Mentors & Partners</h2>
       <div class="row">
+
+          <div class="col-lg-4">
+              <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                <img class="img-fluid rounded-circle mb-3" src="theme/img/Sam_Baisla.jpeg" alt="">
+                <h5>Sam Baisla</h5>
+                <h6>Founder & CEO at NEXEL World, Brand Samosa CEO at Startup India Foundation Serial Entrepreneur and 21st century leader</h6>
+    
+              </div>
+            </div>
+
+
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="theme/img/Anil_Chhikara.jpeg" alt="">
             <h5>Anil Chhikara</h5>
+            <h6>Chairman, Startup India Foundation | WeDeal China | CEO, BlueBolt Startup Factory | Judge India 1st Startup Reality Show</h6>
           </div>
         </div>
-        <div class="col-lg-4">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="theme/img/Sam_Baisla.jpeg" alt="">
-            <h5>Sam Baisla</h5>
-          </div>
-        </div>
+       
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="theme/img/Mukesh_malik.jpeg" alt="">
             <h5>Mukesh Malik</h5>
+            <h6>CEO, ProjectGK, Partner ah! Ventures, Co-founder SMARTup, Director Founder's Institute</h6>
+
           </div>
         </div>
        
