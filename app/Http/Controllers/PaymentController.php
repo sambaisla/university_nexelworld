@@ -195,6 +195,16 @@ class PaymentController extends Controller
     {
         $data = $request->all();
 
+        $validatedData = $request->validate([
+            'email' => 'unique:users',
+            
+        ], [
+    
+                'email.unique' => 'Email already exists.',
+     
+    
+            ]);
+
         $user_id=DB::table('users')->insertGetId(
             ['reference_number'=>$data['reference_code'],'referred_by'=>$data['refered_by_user_id'],'name' => $data['name'],'email'=>$data['email'],'mobile_number'=>$data['mobile_number'],'profession'=>$data['profession'],'password'=>Hash::make($data['password'])]
         );

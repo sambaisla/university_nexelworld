@@ -45,6 +45,19 @@ background-size: cover;
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+
+
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+
             <div class="card" style="background-color:#a04655;">
                <b> <div class="card-header text-center" style="font-size:25px;color:#ffffff;">{{ __('Register') }}</div></b>
 
@@ -62,11 +75,7 @@ background-size: cover;
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                            
                             </div>
                         </div>
 
@@ -76,11 +85,7 @@ background-size: cover;
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                            
                             </div>
                         </div>
 
@@ -90,11 +95,7 @@ background-size: cover;
                             <div class="col-md-6">
                                 <input id="mobile_number" type="tel" class="form-control @error('mobile_number') is-invalid @enderror" name="mobile_number" value="{{ old('mobile_number') }}" required autocomplete="mobile_number">
 
-                                @error('mobile_number')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                               
                             </div>
                         </div>
 
@@ -113,11 +114,7 @@ background-size: cover;
                                     </select>
                                 {{-- <input id="profession" type="text" class="form-control @error('profession') is-invalid @enderror" name="profession" value="{{ old('profession') }}" required autocomplete="profession"> --}}
 
-                                @error('profession')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                              
                             </div>
                         </div>
 
@@ -132,11 +129,7 @@ background-size: cover;
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                            
                             </div>
                         </div>
 
