@@ -29,7 +29,7 @@ class PaymentController extends Controller
                    
         
         $payload = Array(
-            'purpose' => 'Course payment',
+            'purpose' => 'Nexel Academy Subscription',
             'amount' => '998',
             'phone' => $request->phone,
             'buyer_name' => $request->username,
@@ -139,7 +139,7 @@ class PaymentController extends Controller
                    
         
         $payload = Array(
-            'purpose' => 'Subscription',
+            'purpose' => 'Nexel Academy Subscription',
             'amount' => '948',
             'phone' => Auth::user()->mobile_number,
             'buyer_name' => Auth::user()->name,
