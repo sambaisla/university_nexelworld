@@ -263,28 +263,18 @@ class PaymentController extends Controller
         'email' => 'unique:users',
         
     ], [
-
-            'email.unique' => 'Email already exists.',
-
-         
-
+            'email.unique' => 'Email already exists.',     
         ]);
 
         $user_id=DB::table('users')->insertGetId(
             ['lp_invite_ref_code'=>$data['real_reference_number'],'credits'=>0,'name' => $data['name'],'email'=>$data['email'],'mobile_number'=>$data['mobile_number'],'password'=>Hash::make($data['password'])]
         );
-    
-        
+     
         $user = \App\User::where('id','=',$user_id)->first();
         Auth::login($user);
-      
-       
 
         return redirect('lp_invite_dashboard');          
 
-        // return view('home',compact('course'));
-
-        // echo "<pre>";print_r($data);die;
     }
        
 
