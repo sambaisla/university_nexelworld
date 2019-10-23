@@ -88,7 +88,7 @@ section.pricing {
 {{-- put cotent here  --}}
 <br>
 <div class="container">
-<h4 class="text-center" style="text-shadow:2px 2px #ffffcc;">Get access to unlimited courses at an effective price of <i class="fa fa-rupee"></i> 79/month.
+<h4 class="text-center" style="text-shadow:2px 2px #ffffcc;">Get access to unlimited courses at an effective price of <i class="fa fa-rupee"></i> 79/- month.
 </h4>
 </div>
 <section class="pricing py-5">

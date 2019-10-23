@@ -44,8 +44,14 @@ class HomeController extends Controller
         $lp_invite_ref_code=Auth::User()->lp_invite_ref_code;
         // echo $lp_invite_ref_code;die;
           $payment_id=Auth::User()->payment_id;
+          $purpose=Auth::User()->purpose;
+
 
           if($lp_invite_ref_code=='erT45bnYuiOp')
+          {
+            return view('home',compact('course'));
+          }
+          elseif($purpose=='Launchpad Application')
           {
             return view('home',compact('course'));
           }
