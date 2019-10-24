@@ -174,6 +174,7 @@
 
                                 @foreach($chapter_details as $chapter)
                                 <li>
+                                        
                                     <h4>{{$chapter->chapter_name}}</h4>
                                     <p>{{$chapter->chapter_details}}</p>
                                     {{-- <a class="btn_2 text-uppercase" href="{{url('/chapter_tutorial-'.$chapter->course_id.'-'.$chapter->chapter_id)}}">View Details</a> --}}
@@ -197,7 +198,9 @@
                             <li>
                                 <a class="justify-content-between d-flex" href="#">
                                     <p style="color:black;font-weight:bold;font-size:18px;">Course</p>
-                                    <span class="color">{{$chapter_details[0]['course_name']}}</span>
+
+                                    
+                                    <span class="color">{{ Str::words($chapter_details[0]['course_name'], 4)}}</span>
                                 </a>
                             </li>
                             <li>
