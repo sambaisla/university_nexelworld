@@ -264,6 +264,9 @@
                                         <button type="submit" onclick="window.location='{{ url("user_watched_courses-$course_details->course_id") }}'" class="mb-2 mr-2 btn btn-warning" value="Buy Course">Watch Again</button>
 
 
+                                            @elseif($course_details->active==0)
+                                            <button type="submit" class="mb-2 mr-2 btn btn-warning" >Coming soon</button>
+
                                             @else 
                                         <button type="submit" onclick="window.location='{{ url("user_watched_courses-$course_details->course_id") }}'" class="mb-2 mr-2 btn btn-warning" value="Buy Course">Watch</button>
                                     

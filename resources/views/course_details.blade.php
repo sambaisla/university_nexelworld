@@ -277,7 +277,14 @@
                                                 <img src="img/cource/cource_1.png" alt="">
                                             </div>
                                             <div class="desc">
-                                                <h5><a href="{{url('full_course_details-'.$all_cou->course_id)}}">{{$all_courses->course_name}}</a>
+                                                <h5>
+                                                    @if($all_courses->active==1)
+                                                    <a href="{{url('full_course_details-'.$all_cou->course_id)}}">{{$all_courses->course_name}}</a>
+                                                    @else 
+                                                    {{$all_courses->course_name}} ( Coming soon...)
+
+
+                                                    @endif
                                                 </h5>
                                             
                                                 <p class="comment">

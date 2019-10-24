@@ -191,6 +191,10 @@
                 $course_details = App\course::where('course_id',$course->course_id)->get();
                 // echo "<pre>";print_r($course_details);die;
                 ?>
+
+
+@if($course_details[0]->active==1)
+
                  <a href="{{url('/full_course_details-'.$course->course_id)}}">
                 <div class="col-sm-6 col-lg-4">
                     <div class="single_special_cource">
@@ -224,6 +228,41 @@
                     </div>
                 </div>
                  </a>
+@else 
+<div class="col-sm-6 col-lg-4">
+        <div class="single_special_cource">
+           
+            <img src="theme/img/{{$course_details[0]->course_photo}}" class="special_img" alt="">
+           
+            <div class="special_cource_text">
+            {{-- <a href="{{url('/full_course_details')}}" class="btn_4">{{$courses->course_name}}</a> --}}
+
+           
+                <h3>{{$course_details[0]->course_name}}</h3>
+                {{-- <h4>{{$courses->course_fee}}</h4> --}}
+                <p><?php 
+                $value = str_limit($course_details[0]->course_description, 200);
+
+                ?>
+                </p>
+            <p>{{$value}}</p>
+                <div class="author_info">
+                    <div class="author_img">
+                        <img src="theme/img/author/trainer.jpg" alt="" style="border-radius:50%;">
+                        <div class="author_info_text">
+                            <p>Conducted by:</p>
+                        <h5><a target="blank" href="https://www.linkedin.com/in/sambaisla">{{$course_details[0]->trainer_name}}</a></h5>
+                        </div>
+                    </div>
+                 
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+@endif
+
                 @endforeach
             </div>
            
