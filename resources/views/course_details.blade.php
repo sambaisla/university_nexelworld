@@ -243,9 +243,7 @@
 
                                     <a href="{{url('register')}}" class="btn_1 d-block">Subscribe</a>
   
-                        @else 
-
-                        <a href="{{url('user_watched_courses-'.$chapter_details[0]['course_id'])}}" class="btn_1 d-block">Watch</a>
+                       
 
 
                         @endif
