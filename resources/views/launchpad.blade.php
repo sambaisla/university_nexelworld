@@ -83,7 +83,7 @@
     </div>
   </section>
 
-<h4 class="text-center">"Applications closing on 31st oct 2019. &nbsp;HURRY Up !" <span style=" text-shadow: 2px 2px 8px #ffff99;"><i>31st October, 2019</i></span></h4>
+<h4 class="text-center">"Applications closing on <span style=" text-shadow: 2px 2px 8px #ffff99;"><i>31st October, 2019</i></span>. &nbsp;HURRY Up !" </h4>
   <!-- Testimonials -->
   <section class="testimonials text-center bg-light">
     <div class="container">
@@ -146,28 +146,13 @@
         </div>
        
       </div>
+      <br><br>
+      <a class="btn btn-lg btn-primary" href="{{url('/registration_for_launchpad')}}" style="background:#2C3810;border:none;">Apply Now</a>
+
     </div>
   </section>
 
-  <!-- Call to Action -->
-  <section class="call-to-action text-white text-center">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <h2 class="mb-4"></h2>
-        </div>
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-         
-         
-                <a class="btn btn-lg btn-primary" href="{{url('/registration_for_launchpad')}}">Apply Now</a>
 
-          
-       
-        </div>
-      </div>
-    </div>
-  </section>
 
 
   <!-- Bootstrap core JavaScript -->

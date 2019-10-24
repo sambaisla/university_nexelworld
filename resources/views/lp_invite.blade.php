@@ -83,6 +83,8 @@
     </div>
   </section>
 
+  <h4 class="text-center">"Applications closing on <span style=" text-shadow: 2px 2px 8px #ffff99;"><i>31st October, 2019</i></span>. &nbsp;HURRY Up !" </h4>
+
   <!-- Testimonials -->
   <section class="testimonials text-center bg-light">
       <div class="container">
@@ -93,7 +95,7 @@
                 <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                   <img class="img-fluid rounded-circle mb-3" src="theme/img/Sam_Baisla.jpeg" alt="">
                   <h5>Sam Baisla</h5>
-                  <h6>Founder & CEO at NEXEL World, Brand Samosa CEO at Startup India Foundation Serial Entrepreneur and 21st century leader</h6>
+                  <p>Founder & CEO at NEXEL World, Brand Samosa CEO at Startup India Foundation Serial Entrepreneur and 21st century leader</p>
       
                 </div>
               </div>
@@ -103,7 +105,7 @@
             <div class="testimonial-item mx-auto mb-5 mb-lg-0">
               <img class="img-fluid rounded-circle mb-3" src="theme/img/Anil_Chhikara.jpeg" alt="">
               <h5>Anil Chhikara</h5>
-              <h6>Chairman, Startup India Foundation | WeDeal China | CEO, BlueBolt Startup Factory | Judge India 1st Startup Reality Show</h6>
+              <p>Chairman, Startup India Foundation | WeDeal China | CEO, BlueBolt Startup Factory | Judge India 1st Startup Reality Show</p>
             </div>
           </div>
          
@@ -111,34 +113,50 @@
             <div class="testimonial-item mx-auto mb-5 mb-lg-0">
               <img class="img-fluid rounded-circle mb-3" src="theme/img/Mukesh_malik.jpeg" alt="">
               <h5>Mukesh Malik</h5>
-              <h6>CEO, ProjectGK, Partner ah! Ventures, Co-founder SMARTup, Director Founder's Institute</h6>
+              <p>CEO, ProjectGK, Partner ah! Ventures, Co-founder SMARTup, Director Founder's Institute</p>
   
             </div>
           </div>
          
         </div>
+
+        <br><br>
+      <div class="row">
+
+          <div class="col-lg-4">
+              <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                <img class="img-fluid rounded-circle mb-3" src="theme/img/startupindia image.png" alt="">
+               
+    
+              </div>
+            </div>
+
+
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="theme/img/2.jpeg" alt="">
+           
+          </div>
+        </div>
+       
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="theme/img/decodr.png" alt="">
+           
+
+          </div>
+        </div>
+       
+      </div>
+      <br><br>
+      <a href="{{route('invite_registration_form', $real_reference_number)}}" class="btn btn-primary btn-lg text-center" role="button" style="background:#2C3810;border:none;">Apply Now</a> 
+
       </div>
     </section>
 
+
   <!-- Call to Action -->
-  <section class="call-to-action text-white text-center">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <h2 class="mb-4"></h2>
-        </div>
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-         
-         
-            <a href="{{route('invite_registration_form', $real_reference_number)}}" class="btn btn-info btn-xs" role="button">Apply Now</a> 
-           
-          
-       
-        </div>
-      </div>
-    </div>
-  </section>
+ 
 
 
   <!-- Bootstrap core JavaScript -->
