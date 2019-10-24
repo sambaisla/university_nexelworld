@@ -245,7 +245,7 @@
 
                 ?>
                 </p>
-            <p>{{$value}}</p>
+            <p>{{$value}} ....<b>(Coming soon)</b></p>
                 <div class="author_info">
                     <div class="author_img">
                         <img src="theme/img/author/trainer.jpg" alt="" style="border-radius:50%;">
