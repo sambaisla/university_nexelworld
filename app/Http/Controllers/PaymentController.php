@@ -180,6 +180,16 @@ class PaymentController extends Controller
              $name=Auth::User()->name;
              Mail::to($email)->send(new ConfirmationMail($name));
  
+   if(Auth::User()->refered_by_user_id!=NULL)
+             {
+                $refered_by_details=\App\User::where('id',Auth::User()->refered_by_user_id)
+                ->first();
+                $available_credits=$refered_by_details->credits;
+        
+                DB::table('users')
+                ->where('id', Auth::User()->refered_by_user_id)
+                ->update(['credits'=>$available_credits+100]);
+             }
  
          return view('home',compact('course'));
     }
@@ -218,12 +228,7 @@ class PaymentController extends Controller
        
       
 
-        $refered_by_details=\App\User::where('id',$data['refered_by_user_id'])->first();
-        $available_credits=$refered_by_details->credits;
-
-        DB::table('users')
-        ->where('id', $data['refered_by_user_id'])
-        ->update(['credits'=>$available_credits+100]);
+      
 
        
         return view('payment_screen',compact('name','email'));
