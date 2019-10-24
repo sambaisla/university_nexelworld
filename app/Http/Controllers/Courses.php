@@ -219,14 +219,14 @@ class Courses extends Controller
         // echo "<pre>";print_r($data);die;
         $validatedData = $request->validate([
             'email' => 'unique:users',
-            
+             'password'=>'confirmed',
         ], [
                 'email.unique' => 'Email already exists.',     
             ]);
             
    
         $user_id=DB::table('users')->insertGetId(
-            ['credits'=>0,'name' => $data['name'],'email'=>$data['email'],'mobile_number'=>$data['mobile_number'],'profession'=>$data['profession'],'purpose'=>$data['purpose'],'password'=>Hash::make($data['password'])]
+            ['credits'=>0,'city_name'=>$data['city_name'],'name' => $data['name'],'email'=>$data['email'],'mobile_number'=>$data['mobile_number'],'profession'=>$data['profession'],'purpose'=>$data['purpose'],'password'=>Hash::make($data['password'])]
         );
 
         $course=\App\course::select('course_id')->distinct()->get();

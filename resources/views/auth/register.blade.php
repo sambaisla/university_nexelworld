@@ -133,6 +133,20 @@ background-size: cover;
 
 
 
+                        <div class="form-group row">
+                            <label for="city_name" class="col-md-4 col-form-label text-md-right">{{ __('City name') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="city_name" type="text" class="form-control @error('city_name') is-invalid @enderror" name="city_name" value="{{ old('city_name') }}" required autocomplete="city_name">
+
+                                @error('city_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
 
 
 
