@@ -334,7 +334,7 @@
                         <div class="contact_info">
                             <p><span> Address :</span> India | Africa | UAE </p>
                            
-                            <p><span> Email : </span>info@nexelworld.com </p>
+                            <p><span> Email : </span>support@nexelworld.com </p>
                         </div>
                     </div>
                 </div>
