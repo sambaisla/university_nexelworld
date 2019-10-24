@@ -198,7 +198,8 @@
             
                                         <p style="color:white;font-size:16px;">Watch chapters and <a style="color:yellow;font-size:20px;" href="{{url('my_courses')}}"><u>earn 10 credits</u></a> </p>
                                         <p style="color:white;font-size:16px;"><a style="color:yellow;font-size:20px;" href="{{url('/refer_friend')}}" ><u>Refer</u> </a>your friend to earn 100 credits. </p>
-            
+                                        <p class="pull-right" style="color:white;font-size:16px;"><b>Contact support</b> : support@nexelworld.com</p>
+
             
                                     </div>
                                     </div>
