@@ -38,9 +38,19 @@ background-size: cover;
 
 </style>
 <body>
-<div class="container" style="height:100px;">
+<div class="container card col-md-9" style="margin-top:20px;margin-bottom:20px;background:#ffffff;border-radius:10px;padding:10px;box-sizing:border-box;box-shadow: 5px 5px 8px #e6e6e6;">
+<h4 class="text-center" style="font-size:1.2rem;">Get unlimited access for a FULL YEAR to courses, e-books, webinars, events and much more!!</h4>
+<h5 style="color:green;text-shadow:0 0 1px green;" class="text-center">Register now at &#8377;<i>79/- per month</i></h5>
+<ul style="list-style-type:none;"><b>You will get:</b>
+<li><i class="fa fa-check"></i>  Learn about Preparing Business Plan, Go to Market Strategy, Bootstrapping, Growth and Expansion, Fund-raising, and everything else from industry experts.</li>
+<li><i class="fa fa-check"></i> 30+ hours of video content.</li>
+<li><i class="fa fa-check"></i> 20+ e-books and case studies</li>
+<li><i class="fa fa-check"></i> FREE entry into webinars</li>
+<li><i class="fa fa-check"></i> Discounted entry into events</li>
+<li><i class="fa fa-check"></i> Full access to the exclusive community</li>
+<li> and much more...</li>
 
-
+</ul>
 </div>
 <div class="container">
     <div class="row justify-content-center">

@@ -14,7 +14,7 @@
 <link href="bsa_dashboard/architectui-html-free/main.css" rel="stylesheet">
 <style>
         .course_video{
-            width:100%;
+            /* width:100%; */
         }
         </style> 
 </head>
@@ -250,8 +250,8 @@
                             <div class="row"  id="scroll_to">
                                     <div class="col-md-12">
                                         <div class="main-card mb-3 card">
-                                            <div class="card-body">
-                                                <iframe class="course_video" height="400" src="{{$selected_chapter_details[0]->course_youtube_link}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       
+                                            <div class="card-body embed-responsive embed-responsive-16by9">
+                                                <iframe class="course_video" src="{{$selected_chapter_details[0]->course_youtube_link}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       
                                             </div>                             
                                     </div>                          
                                 </div>                                       

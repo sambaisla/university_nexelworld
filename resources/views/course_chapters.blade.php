@@ -297,8 +297,8 @@
         <div class="row">
                 <div class="col-md-12">
                     <div class="main-card mb-3 card">
-                        <div class="card-body"><h5 class="card-title">Course introduction</h5>
-                            <iframe class="intro_image image-fluid" width="880" height="400" src="{{$course_details[0]->thumbnail}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="card-body embed-responsive embed-responsive-16by9"><h5 class="card-title">Course introduction</h5>
+                            <iframe class="intro_image image-fluid" src="{{$course_details[0]->thumbnail}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
                 </div>
