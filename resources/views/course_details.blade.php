@@ -174,6 +174,7 @@
 
                                 @foreach($chapter_details as $chapter)
                                 <li>
+                                        
                                     <h4>{{$chapter->chapter_name}}</h4>
                                     <p>{{$chapter->chapter_details}}</p>
                                     {{-- <a class="btn_2 text-uppercase" href="{{url('/chapter_tutorial-'.$chapter->course_id.'-'.$chapter->chapter_id)}}">View Details</a> --}}
@@ -197,7 +198,9 @@
                             <li>
                                 <a class="justify-content-between d-flex" href="#">
                                     <p style="color:black;font-weight:bold;font-size:18px;">Course</p>
-                                    <span class="color">{{$chapter_details[0]['course_name']}}</span>
+
+                                    
+                                    <span class="color">{{ Str::words($chapter_details[0]['course_name'], 4)}}</span>
                                 </a>
                             </li>
                             <li>
@@ -240,6 +243,10 @@
 
                                     <a href="{{url('register')}}" class="btn_1 d-block">Subscribe</a>
   
+                        @else 
+
+                        <a href="{{url('user_watched_courses-'.$chapter_details[0]['course_id'])}}" class="btn_1 d-block">Watch</a>
+
 
                         @endif
 
@@ -274,7 +281,14 @@
                                                 <img src="img/cource/cource_1.png" alt="">
                                             </div>
                                             <div class="desc">
-                                                <h5><a href="{{url('full_course_details-'.$all_cou->course_id)}}">{{$all_courses->course_name}}</a>
+                                                <h5>
+                                                    @if($all_courses->active==1)
+                                                    <a href="{{url('full_course_details-'.$all_cou->course_id)}}">{{$all_courses->course_name}}</a>
+                                                    @else 
+                                                    {{$all_courses->course_name}} ( Coming soon...)
+
+
+                                                    @endif
                                                 </h5>
                                             
                                                 <p class="comment">
