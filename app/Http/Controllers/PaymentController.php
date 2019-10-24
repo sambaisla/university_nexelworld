@@ -207,7 +207,7 @@ class PaymentController extends Controller
 
         $validatedData = $request->validate([
             'email' => 'unique:users',
-            
+            'password'=>'confirmed',
         ], [
     
                 'email.unique' => 'Email already exists.',
@@ -266,13 +266,13 @@ class PaymentController extends Controller
 
  $validatedData = $request->validate([
         'email' => 'unique:users',
-        
+        'password'=>'confirmed',
     ], [
             'email.unique' => 'Email already exists.',     
         ]);
 
         $user_id=DB::table('users')->insertGetId(
-            ['lp_invite_ref_code'=>$data['real_reference_number'],'credits'=>0,'name' => $data['name'],'email'=>$data['email'],'mobile_number'=>$data['mobile_number'],'password'=>Hash::make($data['password'])]
+            ['lp_invite_ref_code'=>$data['real_reference_number'],'city_name'=>$data['city_name'],'credits'=>0,'name' => $data['name'],'email'=>$data['email'],'mobile_number'=>$data['mobile_number'],'password'=>Hash::make($data['password'])]
         );
      
         $user = \App\User::where('id','=',$user_id)->first();

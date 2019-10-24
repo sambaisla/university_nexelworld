@@ -112,6 +112,22 @@ background-size: cover;
                             </div>
                         </div>
 
+
+
+                        <div class="form-group row">
+                            <label for="city_name" class="col-md-4 col-form-label text-md-right">{{ __('City name') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="city_name" type="text" class="form-control @error('city_name') is-invalid @enderror" name="city_name" value="{{ old('city_name') }}" required autocomplete="city_name">
+
+                              
+                            </div>
+                        </div>
+
+
+
+
+
                         <div class="form-group row">
                             <label for="purpose" class="col-md-4 col-form-label text-md-right">{{ __('Purpose') }}</label>
 
