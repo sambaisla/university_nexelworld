@@ -23,7 +23,7 @@
         <div class="app-header header-shadow">
             <div class="app-header__logo">
                 {{-- <div class="logo-src"></div> --}}
-                <a href="{{url('/')}}"><img src="theme/img/logo (3).png" class="img-fluid" alt="Brand samosa" width="75px" height="23px"></a>
+                <a class="navbar-brand logo_2" href="{{url('/')}}" > <img src="theme/img/logo.png" alt="logo" > </a>
                 <div class="header__pane ml-auto">
                     <div>
                         <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
