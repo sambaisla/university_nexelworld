@@ -157,23 +157,25 @@
 </style>
             <div class="row">
                 <div class="col-lg-8 course_details_left">
-                    <div class="embed-responsive embed-responsive-16by9">
+                    
                     
 
                         @if($chapter_details[0]->thumbnail!=NULL)
+                        <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="intro_image" src="{{$chapter_details[0]->thumbnail}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <!-- <img class="img-fluid" src="theme/img/single_cource.png" alt=""> -->
+                            </div>
                            @else 
                            
-                           <img src="theme/img/course_6_thumbnail.jpeg" class="special_img" alt="">
+                           <img src="theme/img/course_6_thumbnail.jpeg" class="special_img img-fluid" alt="">
     
-\    
+
     
                            @endif
 
                         {{-- <iframe class="intro_image" src="{{$chapter_details[0]->thumbnail}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> --}}
                         <!-- <img class="img-fluid" src="theme/img/single_cource.png" alt=""> -->
-                    </div>
+                   
                     <div class="content_wrapper">
                         <h4 class="title_top">Course Details</h4>
                         <div class="content">
