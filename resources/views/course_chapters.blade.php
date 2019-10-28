@@ -326,10 +326,22 @@
                                                                     ->where('chapter_id',$chapters->chapter_id)                
                                                                     ->first();
                                     
+									 $chapters_completed_status=\App\chapters_completed_user_details::where('course_id',$course_id)
+                                                                    ->where('user_id',Auth::User()->id) 
+                                                                    ->where('chapter_id',$chapters->chapter_id) 
+                                                                    ->where('chapter_completion_status',1)                
+                                                                    ->first();  
+									
+									
                                     $i++;
                                     ?>
                                     <li class="list-group-item">
                                    
+								       @if($chapters_completed_status)
+
+                                        <h5 style="color:red;">Completed</h5>
+                                      @endif
+								   
                                         <h5 class="list-group-item-heading">
                                             <a style="color:black;" href="{{url('user_watching_chapter-'.$course_id.'-'.$chapters->chapter_id)}}">Lesson {{$i}} - {{$chapters->chapter_name}}</a></h5>
                                         <p class="list-group-item-text">{{$chapters->chapter_details}}</p>

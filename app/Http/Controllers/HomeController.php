@@ -147,6 +147,14 @@ class HomeController extends Controller
                               'chapter_id'=>$course_watched_count+1,
                           ]
                       );
+					  
+					  
+					  $update = DB::table('chapters_completed_user_details')
+                      ->where('user_id', $user_id) 
+                      ->where('course_id', $course_id)
+                      ->where('chapter_id', $course_watched_count)  
+                      ->update(['chapter_completion_status' => 1]);
+					  
                   }
  
       
