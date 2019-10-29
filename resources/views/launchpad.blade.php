@@ -21,6 +21,7 @@
   <!-- Custom styles for this template -->
   <link href="theme/css/landing-page.min.css" rel="stylesheet">
   <link rel="stylesheet" href="theme/css/style.css">
+  <link rel="stylesheet" href="theme/css/animate.css">
   
   <link rel="stylesheet" href="theme/css/themify-icons.css">
 </head>
@@ -29,8 +30,14 @@
 
  
 
+  <div class="row">
+    <div class="col-md-12 text-center">
+    <a class="navbar-brand" href="{{url('/')}}"> <img src="theme/img/logo.png" alt="Nexel academy"> </a>
+    </div>
+  </div>
   <!-- Masthead -->
   <header class="masthead text-white text-center">
+
     <div class="overlay"></div>
     <div class="container">
       <div class="row">

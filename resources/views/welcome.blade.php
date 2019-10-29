@@ -215,7 +215,12 @@
                         <p>{{$value}}</p>
                             <div class="author_info">
                                 <div class="author_img">
+                                    @if($course_details[0]->trainer_name=='Sam Baisla')
                                     <img src="theme/img/author/trainer.jpg" alt="" style="border-radius:50%;">
+                                    @else 
+                                    <img src="theme/img/author/sourabh_goyal.jpg" alt="" style="border-radius:50%;">
+
+                                    @endif
                                     <div class="author_info_text">
                                         <p>Conducted by:</p>
                                     <h5><a target="blank" href="https://www.linkedin.com/in/sambaisla">{{$course_details[0]->trainer_name}}</a></h5>
