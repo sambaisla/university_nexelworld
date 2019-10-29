@@ -20,7 +20,9 @@
 
   <!-- Custom styles for this template -->
   <link href="theme/css/landing-page.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="theme/css/style.css">
+  
+  <link rel="stylesheet" href="theme/css/themify-icons.css">
 </head>
 
 <body>
@@ -153,6 +155,65 @@
   </section>
 
 
+
+     <!-- footer part start-->
+     <footer class="footer-area" id="footer">
+      <div class="container">
+          <div class="row justify-content-between">
+              <div class="col-sm-6 col-md-4 col-xl-4">
+                      <div class="single-footer-widget footer_1">
+                              <a href="{{'/'}}"> <img src="theme/img/logo.png" alt=""> </a>
+                           <p>We are inspiring and empowering next generation entrepreneurs and leaders of the world. Our mission is to help them create a better world and solve critical problems.</p>
+                      
+                       </div>
+              </div>
+              <div class="col-sm-6 col-md-4 col-xl-4">
+                  <div class="single-footer-widget footer_2">
+                      <h4>Follow us</h4>
+                      <p>Stay tuned with our latest updates about industry trends, actionable tips, detailed case studies, client testimonials, events, webinars and much more.
+
+                      </p>
+                      
+                      <div class="social_icon">
+                          <a href="https://www.facebook.com/groups/nexelworld/"> <i class="ti-facebook" style="color:#3B5998;font-size:25px;"></i> </a>
+                          <a href="https://nexelworld.com"> <i class="ti-twitter-alt" style="color:#1DA1F2;font-size:25px;"></i> </a>
+                          <a href="https://www.linkedin.com/groups/10359513/"> <i class="ti-linkedin" style="color:#007DA9;font-size:25px;"></i> </a>
+                          <a href="https://www.instagram.com/nexelworld/"> <i class="ti-instagram" style="color:#E03B65;font-size:25px;"></i> </a>
+                          <a href="https://www.youtube.com/channel/UC2mmOqGZHw7f5m8clDtO4xg/featured?disable_polymer=1"> <i class="ti-youtube" style="color:#CC0000;font-size:25px;"></i> </a>
+
+
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 col-md-4">
+                  <div class="single-footer-widget footer_2">
+                      <h4>Contact us</h4>
+                      <div class="contact_info">
+                          <p><span> Address :</span> India | Africa | UAE </p>
+                         
+                          <p><span> Email : </span>support@nexelworld.com </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="copyright_part_text text-center">
+                      <div class="row">
+                          <div class="col-lg-12">
+                              <p class="footer-text m-0">
+                                  Copyright &copy; 2019. All rights reserved.
+                              </p> 
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
 
 
   <!-- Bootstrap core JavaScript -->
