@@ -315,7 +315,7 @@
                         <div class="main-card mb-3 card">
                             <div class="card-body">
                                 <h5 class="card-title">List of lessons</h5>
-                                <span style="color:red;">Note - To unlock lessons, complate the exercises at the end of each lesson</span>
+                                <span style="color:red;">Note - To unlock lessons, complete the exercises at the end of each lesson</span>
                                 <hr>
                                 <ul class="list-group">
                                    <?php $i=0; ?>
